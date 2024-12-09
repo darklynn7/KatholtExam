@@ -1,0 +1,238 @@
+/* Reset and basic styles */
+body {
+    margin: 0;
+    font-family: 'PT Serif', serif;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    font-size: 1.2rem; /* A bit larger than the original */
+    padding: 0.75rem; /* Slightly more padding */
+    height: 100px; /* Slightly taller */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar a {
+    font-family: 'Dekko', sans-serif;
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Text color */
+    padding: 10px;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem; /* A bit larger than the original */
+  }
+  
+  #infolink {
+    font-family: 'Dekko', sans-serif;
+    font-weight: bold;
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Text color */
+    padding: 10px;
+    display: inline-block;
+    transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+    margin: 0 10px;
+    font-size: 1.2rem; /* A bit larger than the original */
+    border-bottom: 2px solid #000; /* Line under the link */
+  }
+
+  #infovisit {
+  background-color: hsl(0, 0%, 90%);
+  text-decoration: none !important;
+}
+  
+  .navbar-logo {
+    flex: 1;
+  }
+  
+  .navbar-logo img {
+    height: 60px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    flex: 2;
+    justify-content: right;
+  }
+  
+  .navbar-links a {
+    margin: 0 15px;
+  }
+  
+  .navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .dropdown{
+    display: inline-block;
+  }
+  
+  .dropdown button{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Dekko', sans-serif;
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Text color */
+    padding: 10px;
+    display: inline-block;
+    transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+    margin: 0 10px;
+    font-size: 1.2rem; /* A bit larger than the original */
+  }
+  .dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none !important;
+    padding: 10px 15px;
+  }
+  .dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    text-decoration: none !important; /* Removes underline */
+  }
+  .dropdown:hover .content{
+    display: block;
+    text-decoration: none; /* Ensure no underline on hover */
+  }
+  .dropdown:hover button{
+    font-weight: bold; /* Makes the text bold */
+    border-bottom: 2px solid #000; /* Line under the link */
+  }
+  .dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+    text-decoration: none !important;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links on smaller screens */
+    }
+  
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+  }
+  
+  /* Topnav styles */
+  .topnav a:hover {
+    font-weight: bold; /* Makes the text bold */
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Responsive design for topnav */
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+  
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+  
+    .topnav.responsive {
+        position: relative;
+    }
+  
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+  
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+  }
+  
+  /* Dropdown menu styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show dropdown when .show is added */
+  .dropdown-content.show {
+    display: block;
+  }
+  
+  header {
+    position: relative; /* Ensures the overlay is positioned relative to the header */
+    background-image: url('images/ingen-streg.png'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image tiling */
+    min-height: 500px; /* Sets the height of the header */
+    text-align: center; /* Centers the text */
+    color: white; /* Ensures text is visible */
+    display: flex; /* Centers content vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+  }
+  
+  
+  header h1 {
+    font-weight: 300; /* Light font-weight */
+    font-family: 'Dekko', sans-serif;
+  }
+  
+  header p {
+    color: white; /* Muted text */
+    font-family: 'PT Serif', serif;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary blue */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+  }
+
+  .footer {
+    background-color: white;
+    }
+    
+    footer h6 {
+      font-family: 'Dekko', sans-serif;
+      font-size: 24px; /* Adjust the size as needed */
+    }
+    
+    footer p {
+      color: black; /* Muted text */
+      font-family: 'PT Serif', serif;
+    }
