@@ -236,3 +236,229 @@ body {
       color: black; /* Muted text */
       font-family: 'PT Serif', serif;
     }
+
+    .site-section {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+    }
+    
+    .site-section .heading {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .site-section p {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+    }
+    
+    .site-section .list-unstyled li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .site-section .icon-check {
+      color: #32cd32; /* Green check icon color */
+      margin-right: 10px;
+    }
+    
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .site-section h3 {
+      font-family: 'Dekko', sans-serif;
+      font-weight: bold; /* Makes the text bold */
+    }
+
+.values-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.values-section p {
+margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+}
+
+.values-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  text-align: center;
+}
+
+.values-section h6 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+}
+
+.day-section .list-unstyled li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.day-section .icon-check {
+  color: #32cd32; /* Green check icon color */
+  margin-right: 10px;
+}
+
+.day-section h3 {
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold; /* Makes the text bold */
+}
+
+.grid-container {
+  background-color: #f9f9f9;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centerer indholdet */
+    gap: 30px;
+    padding: 50 0;
+}
+
+.grid-item {
+  background-color: #ffffff; /* Baggrundsfarve */
+  border: 1px solid #dcdcdc; /* Kantfarve */
+  border-radius: 8px; /* Runde hjørner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge */
+  padding: 20px; /* Indre afstand */
+  width: 500px; /* Fast bredde */
+  height: 400px; /* Fast højde */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Skjuler overskydende indhold */
+}
+
+.grid-item h6 {
+  margin: 0 0 10px; /* Margen under overskriften */
+  font-size: 1.25em; /* Størrelse på overskriften */
+  color: #333; /* Farve til overskriften */
+}
+
+.grid-item p {
+  margin: 0; /* Ingen margin for brødteksten */
+  font-size: 1em; /* Størrelse på brødtekst */
+  color: #555; /* Farve til brødtekst */
+}
+
+/* Generel stil til containeren af galleriet */
+.section.bg-default {
+  padding: 30px 0;
+  background-color: #f5f5f5; /* Baggrundsfarve */
+}
+
+/* Layout og stil for hver kolonne i galleriet */
+.col-lg-4.col-sm-6 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Galleribillederne */
+.gallery-thumbnail img {
+  width: 100%; /* Gør billederne responsive */
+  border-radius: 8px; /* Rundede hjørner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skærm-effekt */
+  transition: transform 0.3s, box-shadow 0.3s; /* Glidende effekt ved hover */
+}
+
+/* Effekten ved hover */
+.gallery-thumbnail img:hover {
+  transform: scale(1.05); /* Forstørrer billedet lidt */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Skærm-effekt ved hover */
+}
+
+
+.gallery-thumbnail {
+	display: block;
+	max-width: 390px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery-thumbnail .float-title {
+	color: #ffffff;
+	font-weight: 600;
+	font-family: "Ibarra Real Nova", serif;
+	line-height: 1.1;
+	position: absolute;
+	bottom: 43px;
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+	left: 15px;
+	right: 15px;
+	display: block;
+	font-size: 28px;
+}
+
+@media (min-width: 992px) {
+	.gallery-thumbnail .float-title {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.gallery-thumbnail .float-title {
+		opacity: 0;
+		font-size: 36px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.gallery-thumbnail:hover .float-title {
+		opacity: 1;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.traditions-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.traditions-section p {
+margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+}
+
+.traditions-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  text-align: center;
+}
+
+.traditions-section h6 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+}
+
+.service-item {
+  position: relative;
+  padding-left: 80px;
+}
+
+.service-item i {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  font-size: 50px;
+  opacity: .4;
+}
