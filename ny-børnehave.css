@@ -190,7 +190,7 @@ body {
   
   header {
     position: relative; /* Ensures the overlay is positioned relative to the header */
-    background-image: url('images/ingen-streg.png'); /* Replace with your image path */
+    background-image: url('images/børnehave-banner.png'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the header */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents image tiling */
@@ -266,18 +266,19 @@ body {
     
     .img-fluid {
       max-width: 100%;
-      height: auto;
+      height: 500;
       border-radius: 8px;
     }
     
     .site-section h3 {
       font-family: 'Dekko', sans-serif;
       font-weight: bold; /* Makes the text bold */
+      text-align: center;
     }
 
 .values-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .values-section p {
@@ -298,7 +299,7 @@ font-family: 'PT Serif', serif;
   font-weight: bold;
   margin-bottom: 20px;
   color: black;
-  font-family: 'PT Serif', serif;
+  font-family: 'Dekko', sans-serif;
 }
 
 .day-section {
@@ -327,8 +328,15 @@ font-family: 'PT Serif', serif;
   font-family: 'PT Serif', serif;
   }
 
+  .day-section h6 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Dekko', sans-serif;
+  }
+
 .grid-container {
-  background-color: #f9f9f9;
+  background-color: white;
   display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centerer indholdet */
@@ -337,8 +345,8 @@ font-family: 'PT Serif', serif;
 }
 
 .grid-item {
-  background-color: #ffffff; /* Baggrundsfarve */
-  border: 1px solid #dcdcdc; /* Kantfarve */
+  background-color: #ffc823; /* Baggrundsfarve */
+  border: 1px solid black; /* Kantfarve */
   border-radius: 8px; /* Runde hjørner */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge */
   padding: 20px; /* Indre afstand */
@@ -351,21 +359,23 @@ font-family: 'PT Serif', serif;
 }
 
 .grid-item h6 {
-  margin: 0 0 10px; /* Margen under overskriften */
-  font-size: 1.25em; /* Størrelse på overskriften */
-  color: #333; /* Farve til overskriften */
+  font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Dekko', sans-serif;
 }
 
 .grid-item p {
-  margin: 0; /* Ingen margin for brødteksten */
-  font-size: 1em; /* Størrelse på brødtekst */
-  color: #555; /* Farve til brødtekst */
-}
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'PT Serif', serif;
+  }
+
 
 /* Generel stil til containeren af galleriet */
 .section.bg-default {
   padding: 30px 0;
-  background-color: #f5f5f5; /* Baggrundsfarve */
+  background-color: white; /* Baggrundsfarve */
 }
 
 /* Layout og stil for hver kolonne i galleriet */
@@ -401,7 +411,7 @@ font-family: 'PT Serif', serif;
 }
 
 .gallery-thumbnail .float-title {
-	color: #ffffff;
+	color: white;
 	font-weight: 600;
 	font-family: "Ibarra Real Nova", serif;
 	line-height: 1.1;
@@ -437,7 +447,7 @@ font-family: 'PT Serif', serif;
 
 .traditions-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .traditions-section p {
@@ -474,10 +484,47 @@ font-family: 'PT Serif', serif;
   opacity: .4;
 }
 
+.food-section p ol li {
+margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+}
+
+.food-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  text-align: center;
+  }
+
+  .food-section h6 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Dekko', sans-serif;
+    }
+
+  
+
 .banner {
-  background-image: url('images/f1ccce19-0254-6d17-a888-ff04009811bf_ck_homepage_hero.jpg'); /* Replace with your image URL */
+  background-image: url('images/mad-i-boernehaven.jpg'); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   height: 200px; /* Adjust the height as needed */
   width: 100%; /* Makes the banner span the full width of the viewport */
+}
+
+.hand-drawn-line {
+  background-image: url('./images/Dotted-line-sketch-wave.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+
+#blyanter {
+  height: 50px; /* Matches the font size */
+  width: auto; /* Maintains aspect ratio */
+  align-content: center; /* Aligns image with the text baseline */
+  display: block; /* Makes the image behave like a block element */
+  margin: 0 auto; /* Horizontally centers the image */
 }

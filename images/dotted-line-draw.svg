@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 40 40;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1=".5" y1="25.5" x2="20.5" y2="25.5"/>
+  <line class="cls-2" x1="60.5" y1="25.5" x2="1880.5" y2="25.5"/>
+  <line class="cls-1" x1="1900.5" y1="25.5" x2="1920.5" y2="25.5"/>
+</svg>
