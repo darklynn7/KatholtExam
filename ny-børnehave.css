@@ -239,7 +239,7 @@ body {
 
     .site-section {
       padding: 50px 0;
-      background-color: #f9f9f9;
+      background-color: white;
     }
     
     .site-section .heading {
@@ -297,8 +297,13 @@ font-family: 'PT Serif', serif;
 .values-section h6 {
   font-weight: bold;
   margin-bottom: 20px;
-  color: #555;
+  color: black;
   font-family: 'PT Serif', serif;
+}
+
+.day-section {
+  padding: 50px 0;
+  background-color: white;
 }
 
 .day-section .list-unstyled li {
@@ -315,6 +320,12 @@ font-family: 'PT Serif', serif;
   font-family: 'Dekko', sans-serif;
   font-weight: bold; /* Makes the text bold */
 }
+
+.day-section p {
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  }
 
 .grid-container {
   background-color: #f9f9f9;
@@ -435,7 +446,7 @@ color: #555;
 font-family: 'PT Serif', serif;
 }
 
-.traditions-section h3 {
+.traditions-section h2 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -443,7 +454,7 @@ font-family: 'PT Serif', serif;
   text-align: center;
 }
 
-.traditions-section h6 {
+.traditions-section h4 {
   font-weight: bold;
   margin-bottom: 20px;
   color: #555;
@@ -461,4 +472,12 @@ font-family: 'PT Serif', serif;
   top: 5px;
   font-size: 50px;
   opacity: .4;
+}
+
+.banner {
+  background-image: url('images/f1ccce19-0254-6d17-a888-ff04009811bf_ck_homepage_hero.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* Adjust the height as needed */
+  width: 100%; /* Makes the banner span the full width of the viewport */
 }
