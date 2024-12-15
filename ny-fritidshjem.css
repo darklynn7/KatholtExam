@@ -306,8 +306,35 @@ font-size: 18px;
 }
 
 .day-section {
-  padding: 50px 0;
   background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centerer indholdet */
+  gap: 30px;
+  padding: 50px 0; /* Padding justeret */
+}
+
+.box-container {
+  display: flex;
+  gap: 10px; /* Spacing between items */
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap when necessary */
+}
+
+.inline-image {
+  max-width: 500px; /* Tilpas størrelsen på billedet */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
+.box {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 20px;
+  max-width: 40%; /* Ensure no item exceeds 30% of the width */
+  box-sizing: border-box; /* Prevents padding from affecting max-width */
 }
 
 .day-section .list-unstyled li {
@@ -349,6 +376,21 @@ font-size: 18px;
 /* Layout og stil for hver kolonne i galleriet */
 .col-lg-4.col-sm-6 {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-lg-2 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* For medium skærme (col-md-4) */
+.col-md-4 {
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -414,7 +456,7 @@ font-size: 18px;
 }
 
 .traditions-section {
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: white;
 }
 
@@ -485,4 +527,65 @@ font-size: 18px;
   align-content: center; /* Aligns image with the text baseline */
   display: block; /* Makes the image behave like a block element */
   margin: 0 auto; /* Horizontally centers the image */
+}
+
+.activities-section {
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.activities-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.activities-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Spacing between items */
+  flex-wrap: wrap; /* Allow items to wrap when necessary */
+}
+
+.activity-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  max-width: 30%; /* Ensure no item exceeds 30% of the width */
+  box-sizing: border-box; /* Prevents padding from affecting max-width */
+}
+
+.activity-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .activity-item {
+    max-width: 45%; /* Two items per line on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-item {
+    max-width: 100%; /* One item per line on small screens */
+  }
+}
+
+
+.activity-item h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.activity-item p {
+  font-size: 0.9rem;
+  color: #666;
 }
