@@ -277,6 +277,77 @@ body {
       text-align: center;
     }
 
+    .container-values {
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between; /* Distribute space evenly */
+      flex-wrap: wrap; /* Allow wrapping if necessary */
+      width: 90%; /* Make the container bigger (90% of viewport width) */
+      flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center content horizontally */
+    }
+    
+    .core-values {
+      padding: 60px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    
+    .values-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .subtitle {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+      text-align: center;
+    }
+    
+    .value-item {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      flex: 1; /* Make items grow equally */
+      max-width: 20%; /* Ensure 5 items fit in one line */
+      text-align: center; /* Optional: center align content */
+      box-sizing: border-box; /* Include padding/borders in width */
+      padding: 10px; /* Add space around items */
+    }
+    
+    .value-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #0078ff;
+    }
+    
+    .value-title {
+      font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 20px;
+    }
+    
+    .value-description {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+      text-align: left;
+    }
+
 .values-section {
   padding: 50px 0;
   background-color: white;
@@ -378,6 +449,60 @@ font-size: 18px;
   font-size: 18px;
   }
 
+  .activities-section {
+    padding: 40px;
+    background-color: white;
+  }
+  
+  .activities-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .activities-container {
+    display: flex;
+    justify-content: space-between; /* Center items within the container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 100px; /* Space between boxes */
+  }
+  
+  .activity-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 calc(50% - 20px); /* 2 boxes per row with 100px gap */
+    width: auto; /* Fixed width for smaller boxes */
+    height: auto; /* Fixed height for consistency */
+    box-sizing: border-box;
+  }
+  
+  .activity-item img {
+    width: 300px;
+    height: 300px; /* Adjust image height */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .activity-item {
+      flex: 1 1 100%; /* 1 item per row on small screens */
+      height: auto; /* Adjust height to fit content */
+    }
+  }
+  
+  .activity-item h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .activity-item p {
+    font-size: 0.9rem;
+    color: #666;
+  }
 
 /* Generel stil til containeren af galleriet */
 .section.bg-default {
@@ -492,6 +617,138 @@ font-size: 18px;
   top: 5px;
   font-size: 50px;
   opacity: .4;
+}
+
+.menu-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.menu-container p {
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+}
+
+.aligned-list-numberless {
+  margin-left: 5px; /* Matches the container's padding */
+  padding-left: 0; /* Removes unnecessary inner padding */
+  list-style-position: inside; /* Aligns bullets with text */
+  margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+font-size: 18px;
+}
+
+.aligned-list-numberless b {
+  margin-left: 5px; /* Matches the container's padding */
+  padding-left: 0; /* Removes unnecessary inner padding */
+  list-style-position: inside; /* Aligns bullets with text */
+  margin-bottom: 20px;
+color: black;
+font-family: 'PT Serif', serif;
+font-size: 18px;
+}
+
+.aligned-list {
+  margin-left: 5px; /* Matches the container's padding */
+  padding-left: 0; /* Removes unnecessary inner padding */
+  list-style-position: inside; /* Aligns bullets with text */
+  list-style: none; /* Remove default numbering */
+  counter-reset: list-counter; /* Initialize counter */
+}
+
+.aligned-list li {
+  counter-increment: list-counter; /* Increment counter for each <li> */
+  margin-left: 0; /* Ensure alignment */
+  display: flex; /* Align numbers and text neatly */
+  align-items: baseline; /* Align text and numbers properly */
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+}
+
+.aligned-list li::before {
+  content: counter(list-counter) ". "; /* Add custom numbers */
+  font-weight: bold; /* Make numbers bold */
+  font-size: 1.5em; /* Increase size of numbers */
+  margin-right: 8px; /* Add spacing between number and text */
+  color: inherit; /* Inherit text color */
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Dekko', sans-serif;
+}
+
+
+/* Menu Title and Introduction */
+.menu-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.menu-intro {
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+}
+
+/* Grid Layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Left Column */
+.menu-subtitle {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.item-description {
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+/* Right Column Image */
+.circle-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centers it horizontally with auto margins */
+}
+
+.circle-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .food-section p ol li {

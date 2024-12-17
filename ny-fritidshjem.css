@@ -277,42 +277,111 @@ body {
       text-align: center;
     }
 
-.values-section {
-  padding: 50px 0;
-  background-color: white;
-}
-
-.values-section p {
-margin-bottom: 20px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 18px;
-}
-
-.values-section h3 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  font-family: 'Dekko', sans-serif;
-  text-align: center;
-}
-
-.values-section h6 {
-  font-weight: bold;
+    .container-values {
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between; /* Distribute space evenly */
+      flex-wrap: wrap; /* Allow wrapping if necessary */
+      width: 90%; /* Make the container bigger (90% of viewport width) */
+      flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center content horizontally */
+    }
+    
+    .core-values {
+      padding: 60px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    
+    .values-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+  
+    .subtitle {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+      text-align: center;
+    }
+    
+    .value-item {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      flex: 1; /* Make items grow equally */
+      max-width: 20%; /* Ensure 5 items fit in one line */
+      text-align: center; /* Optional: center align content */
+      box-sizing: border-box; /* Include padding/borders in width */
+      padding: 10px; /* Add space around items */
+    }
+    
+    .value-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #0078ff;
+    }
+    
+    .value-title {
+      font-weight: bold;
   margin-bottom: 20px;
   color: black;
   font-family: 'Dekko', sans-serif;
   font-size: 20px;
-}
+    }
+    
+    .value-description {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+      text-align: left;
+    }
 
-.day-section {
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centerer indholdet */
-  gap: 30px;
-  padding: 50px 0; /* Padding justeret */
-}
+    .day-section {
+      padding: 50px 0;
+      background-color: white;
+    }
+    
+    .day-section .list-unstyled li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .day-section .icon-check {
+      color: #32cd32; /* Green check icon color */
+      margin-right: 10px;
+    }
+    
+    .day-section h3 {
+      font-family: 'Dekko', sans-serif;
+      font-weight: bold; /* Makes the text bold */
+    }
+    
+    .day-section p {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+      }
+    
+      .day-section h6 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: black;
+        font-family: 'Dekko', sans-serif;
+        font-size: 20px;
+      }
 
 .box-container {
   display: flex;
@@ -322,7 +391,7 @@ font-size: 18px;
 }
 
 .inline-image {
-  max-width: 500px; /* Tilpas størrelsen på billedet */
+  max-width: 600px; /* Tilpas størrelsen på billedet */
   height: auto; /* Bevarer billedets proportioner */
 }
 
@@ -330,11 +399,18 @@ font-size: 18px;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  padding: 20px;
-  max-width: 40%; /* Ensure no item exceeds 30% of the width */
+  padding: 50px;
+  max-width: 30%; /* Ensure no item exceeds 30% of the width */
   box-sizing: border-box; /* Prevents padding from affecting max-width */
+}
+
+.h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  text-align: center;
 }
 
 .day-section .list-unstyled li {
@@ -345,6 +421,12 @@ font-size: 18px;
 .day-section .icon-check {
   color: #32cd32; /* Green check icon color */
   margin-right: 10px;
+}
+
+#skemaText {
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold; /* Makes the text bold */
+  text-align: center;
 }
 
 .day-section h3 {
@@ -381,20 +463,6 @@ font-size: 18px;
   align-items: center;
 }
 
-.col-lg-2 {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* For medium skærme (col-md-4) */
-.col-md-4 {
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Galleribillederne */
 .gallery-thumbnail img {
@@ -454,6 +522,7 @@ font-size: 18px;
 		transition: all 0.3s ease-in-out;
 	}
 }
+
 
 .traditions-section {
   padding: 40px 0;
@@ -531,7 +600,7 @@ font-size: 18px;
 
 .activities-section {
   padding: 40px;
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 .activities-section h2 {
@@ -542,42 +611,36 @@ font-size: 18px;
 
 .activities-container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Spacing between items */
-  flex-wrap: wrap; /* Allow items to wrap when necessary */
+  justify-content: space-between; /* Center items within the container */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 100px; /* Space between boxes */
 }
 
 .activity-item {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
-  max-width: 30%; /* Ensure no item exceeds 30% of the width */
-  box-sizing: border-box; /* Prevents padding from affecting max-width */
+  flex: 1 1 calc(50% - 20px); /* 2 boxes per row with 100px gap */
+  width: auto; /* Fixed width for smaller boxes */
+  height: auto; /* Fixed height for consistency */
+  box-sizing: border-box;
 }
 
 .activity-item img {
-  width: 100%;
-  height: 200px;
+  width: 300px;
+  height: 300px; /* Adjust image height */
   object-fit: cover;
   border-radius: 8px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-  .activity-item {
-    max-width: 45%; /* Two items per line on medium screens */
-  }
-}
-
 @media (max-width: 768px) {
   .activity-item {
-    max-width: 100%; /* One item per line on small screens */
+    flex: 1 1 100%; /* 1 item per row on small screens */
+    height: auto; /* Adjust height to fit content */
   }
 }
-
 
 .activity-item h3 {
   font-size: 1.2rem;

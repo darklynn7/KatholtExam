@@ -17,7 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  
   <title>Børnegården Katholt</title>
 
 </head>
@@ -54,7 +55,7 @@
 
           <a href="børne-praktisk.html">Praktiske oplysninger</a>
 
-          <a href="børne-selv.html">Selvbetjening i børnehaven</a>
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
 
  
 
@@ -76,7 +77,7 @@
 
           <a href="fritid-praktisk.html">Praktiske oplysninger</a>
 
-          <a href="fritid-selv.html">Selvbetjening i fritidshjemmet</a>
+          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
 
  
 
@@ -84,6 +85,7 @@
 
       </div>
 
+      <a href="stamkort.html">Stamkort/børneintranet</a>
       <div class="dropdown">
 
         <button class="dropbtn" class="active" id="infolink">Information
@@ -141,11 +143,10 @@
 
 
 
-    <main>
+        <section class="text-section">
 
-        <section class="contact-info">
-
-            <h2>Børnegården Katholt</h2>
+            <img src="images/blyant-børnegården.svg" alt="Image" id="blyanter">
+            <br>
 
             <address>
 
@@ -187,20 +188,27 @@
 
         </section>
 
- 
+        <br><br>
+        <div class="hand-drawn-line-blue"></div>
+        <br><br>
 
-        <section class="directions">
+        <section class="text-section">
 
-            <h2>Find vej</h2>
-
+            <img src="images/blyant-find-vej.svg" alt="Image" id="blyanter">
             <br>
-
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.394274875947!2d8.482744077096548!3d55.94253797736086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464a550fabeb3119%3A0x2305762e0850bfbd!2sAmagervej%20140%2C%206900%20Skjern!5e0!3m2!1sen!2sdk!4v1734373820252!5m2!1sen!2sdk" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
         </section>
 
-    </main>
-
-
-
+        <br><br>
+        <div class="hand-drawn-line-green"></div>
+        <br><br>
 
 
   <script>

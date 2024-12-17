@@ -474,60 +474,80 @@ header p {
 
   }
 
-
-
-
-
-
-
-
-
-
-
-  main {
-
-    max-width: 800px;
-
-    margin: 20px auto;
-
-    padding: 15px;
-
-    background-color: white;
-
-    border: 1px solid #ddd;
-
-    border-radius: 5px;
-
-}
-
-
-
-h2, h3 {
-
-    color: #263779;
-
-    padding-bottom: 5px; /* Giver lidt luft mellem tekst og stregen */
-
-}
-
-
-
-p, ul, address {
-
-    margin: 10px 0;
-
-}
-
-
-
-ul {
-
-    padding-left: 20px;
-
-}
-
-.board h1{
-
-  text-align: center;
-
+  .hand-drawn-line-blue {
+    background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
+    height: 10px;                /* Adjust height based on line style */
+    background-repeat: repeat-x; /* Repeat the pattern horizontally */
   }
+  
+  .hand-drawn-line-green {
+    background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
+    height: 10px;                /* Adjust height based on line style */
+    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  }
+  
+  .hand-drawn-line-yellow {
+    background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
+    height: 10px;                /* Adjust height based on line style */
+    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  }
+  
+  .hand-drawn-line-red {
+    background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
+    height: 10px;                /* Adjust height based on line style */
+    background-repeat: repeat-x; /* Repeat the pattern horizontally */
+  }
+  
+  #blyanter {
+    height: 70px; /* Matches the font size */
+    width: auto; /* Maintains aspect ratio */
+    align-content: center; /* Aligns image with the text baseline */
+    display: block; /* Makes the image behave like a block element */
+    margin: 0 auto; /* Horizontally centers the image */
+  }
+  
+  .text-section {
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  
+  }
+  
+  .text-section h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Dekko', sans-serif;
+    font-size: 20px;
+  
+  }
+  
+  .text-section p {
+    margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  }
+  
+  .text-section ul {
+    margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+      padding-left: 20px;
+  
+  }
+  
+  .text-section li {
+    margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+      padding-left: 20px;
+  
+  }
+

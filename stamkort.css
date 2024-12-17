@@ -54,7 +54,7 @@ body {
 
  
 
-  #welcomeLink {
+  #card {
 
     font-family: 'Dekko', sans-serif;
 
@@ -674,19 +674,14 @@ font-size: 40px;
 
 
 
-main {
-
-    max-width: 800px;
-
-    margin: 20px auto;
-
-    background-color: #fff;
-
-    border-radius: 8px;
-
-    padding: 20px;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.text-section {
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 
 }
 
@@ -694,15 +689,12 @@ main {
 
 .text-section h2 {
 
-    color: #007bff;
-
-    font-size: 20px;
-
-    border-bottom: 2px solid #263779;
-
-    padding-bottom: 5px;
-
-    margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  text-align: center;
+  font-size: 28px;
 
 }
 
@@ -710,9 +702,11 @@ main {
 
 .text-section ol, ul {
 
-    margin: 10px 0;
-
     padding-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
 
 }
 
@@ -723,6 +717,9 @@ main {
     color: #007bff;
 
     text-decoration: none;
+    margin-bottom: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
 
 }
 
@@ -731,6 +728,9 @@ main {
 .text-section a:hover {
 
     text-decoration: underline;
+    margin-bottom: 20px;
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
 
 }
 
@@ -738,7 +738,10 @@ main {
 
 .text-section p {
 
-    margin: 10px 0;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
 
 }
 
@@ -746,7 +749,10 @@ main {
 
 .text-section li {
 
-    margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
 
 }
 
@@ -754,109 +760,90 @@ main {
 
 .text-section ul li, ol li {
 
-    margin-bottom: 5px;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
 
 }
 
-
-
-
-
-
-
-
-.text-section h1{
-
-    font-family: 'Dekko', sans-serif;
-
-    font-weight: bold ;
-
-text-align: center;
-
-font-size: 40px;
-
+.text-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  font-size: 20px;
+  color: black;
 }
 
- 
-
-.text-section p{
-
-    font-family: Arial, sans-serif;
-
-text-align: center;
-
-font-size: 17px;
-
+.hand-drawn-line-blue {
+  background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
 
- 
-
-.steps h2{
-
-    font-family: 'Dekko', sans-serif;
-
-    font-weight: bold ;
-
-font-size: 40px;
-
+.hand-drawn-line-green {
+  background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
 
- 
-
-.steps strong{
-
-    font-family: 'Dekko', sans-serif;
-
-    font-weight: bold ;
-
-font-size: 20px;
-
+.hand-drawn-line-yellow {
+  background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
 
- 
-
-.steps p{
-
-    font-family: Arial, sans-serif;
-
-font-size: 17px;
-
+.hand-drawn-line-red {
+  background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
 
- 
-
-.steps p{
-
-    font-family: Arial, sans-serif;
-
-font-size: 17px;
-
+#blyanter {
+  height: 70px; /* Matches the font size */
+  width: auto; /* Maintains aspect ratio */
+  align-content: center; /* Aligns image with the text baseline */
+  display: block; /* Makes the image behave like a block element */
+  margin: 0 auto; /* Horizontally centers the image */
 }
 
-
-
-
-
-
-
-.app-features h2{
-
-    font-family: 'Dekko', sans-serif;
-
-    font-weight: bold ;
-
-font-size: 40px;
-
+.aligned-list {
+  margin-left: 0; /* Align numbers with text */
+  padding-left: 0; /* Remove extra space */
 }
 
- 
+.aligned-list li {
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  margin-bottom: 5px; /* Adds spacing between bullet points */
+}
 
-.contact h2{
+.aligned-list li::marker {
+  font-family: 'Dekko', sans-serif; /* Change font for the number */
+  font-size: 28px; /* Adjust size as needed */
+  color: black; /* Optional: Keep consistent */
+  font-weight: bold;
+}
 
-    font-family: 'Dekko', sans-serif;
+.aligned-list-numberless li::marker {
+  font-size: 18px; /* Keep bullet points at their original size */
+  color: black;
+}
 
-    font-weight: bold ;
+.aligned-list-numberless {
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  list-style-type: disc; /* Adds bullet points */
+  margin-left: 20px; /* Indents bullet points */
+  padding-left: 0; /* Removes additional padding */
+}
 
-font-size: 40px;
-
+.aligned-list-numberless li {
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  margin-bottom: 5px; /* Adds spacing between bullet points */
 }
