@@ -1,14 +1,6 @@
 /* Reset and basic styles */
 
-body {
 
-    margin: 0;
-
-    font-family: 'PT Serif', serif;
-
-  }
-
- 
 
   /* Navbar styling */
 
@@ -467,13 +459,24 @@ body {
  
 
   .info-section {
-
-    padding: 50px 0;
-
-    background-color: white;      
-
+    padding: 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
   }
 
+  .login-container {
+    padding: 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+}
  
 
   .info-section h3 {
@@ -499,6 +502,7 @@ body {
     color: #555;
 
     font-family: 'PT Serif', serif;
+    text-align: center;
 
     }
 
@@ -507,20 +511,6 @@ body {
   
 
     
-
- 
-
-    body {
-
-        font-family: Arial, sans-serif;
-
-        background-color: #f7f7f7;
-
-        margin: 0;
-
-        padding: 20px;
-
-    }
 
    
 
@@ -537,21 +527,11 @@ body {
    
 
     form {
-
-        background-color: #fff;
-
-        border: 2px solid #ccc;
-
-        border-radius: 5px;
-
-        padding: 20px;
-
-        margin-bottom: 20px;
-
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-        width: 300px;
-
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
     }
 
    
@@ -660,8 +640,6 @@ font-size: 40px;
 
     padding: 20px;
 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
     width: 300px;
 
 }
@@ -680,9 +658,6 @@ font-size: 40px;
   color: #333;
   max-width: 800px;
   margin: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-
 }
 
  
@@ -693,7 +668,6 @@ font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
   font-family: 'Dekko', sans-serif;
-  text-align: center;
   font-size: 28px;
 
 }
@@ -706,7 +680,7 @@ font-size: 40px;
     margin-bottom: 20px;
     color: #555;
     font-family: 'PT Serif', serif;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 
@@ -719,7 +693,7 @@ font-size: 40px;
     text-decoration: none;
     margin-bottom: 20px;
     font-family: 'PT Serif', serif;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 
@@ -730,7 +704,7 @@ font-size: 40px;
     text-decoration: underline;
     margin-bottom: 20px;
     font-family: 'PT Serif', serif;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 
@@ -741,7 +715,7 @@ font-size: 40px;
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 18px;
+  font-size: 16px;
 
 }
 
@@ -752,7 +726,7 @@ font-size: 40px;
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 18px;
+  font-size: 16px;
 
 }
 
@@ -772,9 +746,15 @@ font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
   font-family: 'Dekko', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
 }
+
+.emoji {
+  font-size: 18; /* Ændr størrelsen på emojis */
+  margin-right: 8px; /* Giver mellemrum mellem emoji og tekst */
+  display: inline-block; /* Sikrer korrekt justering */
+  }
 
 .hand-drawn-line-blue {
   background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */

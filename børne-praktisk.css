@@ -240,11 +240,8 @@ body {
     .info-section {
       padding: 20px;
       background-color: white;
-      color: #333;
       max-width: 800px;
       margin: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
     }
     .info-section h3 {
       font-weight: bold;
@@ -267,6 +264,13 @@ font-size: 18px;
       font-family: 'PT Serif', serif;
       font-size: 18px;
     }
+
+    .info-section li {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+    }
     
     .info-section ul li {
       margin-bottom: 20px;
@@ -275,6 +279,12 @@ font-family: 'PT Serif', serif;
 font-size: 18px;
       list-style-type: disc;
     }
+
+    .emoji {
+      font-size: 18; /* Ændr størrelsen på emojis */
+      margin-right: 8px; /* Giver mellemrum mellem emoji og tekst */
+      display: inline-block; /* Sikrer korrekt justering */
+      }
 
     .hand-drawn-line-blue {
       background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */

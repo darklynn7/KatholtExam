@@ -240,11 +240,8 @@ body {
     .enrollment-fees {
       padding: 20px;
       background-color: white;
-      color: #333;
       max-width: 800px;
       margin: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
     }
     
     .enrollment-fees h2 {
