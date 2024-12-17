@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
+    <meta name=”robots” content=”noindex”>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
@@ -12,108 +13,89 @@
   <title>Børnegården Katholt</title>
 </head>
 <body>
-  <nav class="navbar">
-    <!-- Left: Logo -->
-    <div class="navbar-logo">
-      <a href="#"><img src="images/Katholt-logo.png" alt="Logo"></a>
-    </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Left: Logo -->
+      <div class="navbar-logo">
+        <a href="index.html"><img src="images/Katholt-logo.png" alt="Logo"></a>
+      </div>
   
-    <div class="topnav" id="myTopnav">
-      <a href="index.html" class="active" id="welcomeLink">Velkommen</a>
-      <div class="dropdown">
-        <button class="dropbtn">Børnehave
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="ny-børnehave.html">Ny i børnehaven</a>
-          <a href="børne-praktisk.html">Praktiske oplysninger</a>
-          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
-
+      <!-- Navigation Links -->
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active" id="welcomeLink">Velkommen</a>
+  
+        <div class="dropdown">
+          <button class="dropdown-button">Børnehave <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="ny-børnehave.html">Ny i børnehaven</a>
+            <a href="børne-praktisk.html">Praktiske oplysninger</a>
+            <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
+          </div>
+        </div>
+  
+        <div class="dropdown">
+          <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
+            <a href="fritid-praktisk.html">Praktiske oplysninger</a>
+            <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
+          </div>
+        </div>
+  
+        <a href="stamkort.html">Stamkort/børneintranet</a>
+  
+        <div class="dropdown">
+          <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="info-kontakt.html">Kontakt</a>
+            <a href="info-besøg.html">Åbningstider og lukkedage</a>
+            <a href="info-bestyrelse.html">Bestyrelse</a>
+            <a href="info-studerende.html">Studerende</a>
+          </div>
         </div>
       </div>
-      <div class="dropdown">
-        <button class="dropbtn">Fritidshjem
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
-          <a href="fritid-praktisk.html">Praktiske oplysninger</a>
-          <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
-        </div>
-      </div>
-      <a href="stamkort.html">Stamkort/børneintranet</a>
-      <div class="dropdown">
-        <button class="dropbtn">Information
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="info-kontakt.html">Kontakt</a>
-          <a href="info-besøg.html">Besøg og åbningstider</a>
-          <a href="info-bestyrelse.html">Bestyrelse</a>
-          <a href="info-studerende.html">Studerende</a>
-          <a href="info-sygdom.html">Sygdom/fravær</a>
-        </div>
-      </div>
+  
+      <!-- Hamburger Menu Icon -->
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
-    </div>
-  </nav>
-
- <!-- Header Section -->
+    </nav>
+  
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        x.classList.toggle("responsive");
+      }
+    </script>
+   <!-- Header Section -->
  <header class="py-5 bg-light mb-4">
-<div class="container">
-  <div class="text-center">
-      <a href="#" class="btn btn-primary btn-lg">Indmelding børnhave</a>
-      <a href="#" class="btn btn-primary btn-lg">Indmelding fritidshjem</a>
-  </div>
-</div>
-</header>
-
-<section class="info-section">
   <div class="container">
-    <h3>gjgdj</h3>
-    <p>Børnegården Katholt er en aldersintegreret institution med børnehave og fritidshjem, normeret til 175 børn. Vi har en lang historie, der går tilbage til 1973, hvor Unge Hjems Børnehave åbnede dørene. Senere fulgte Skjern Fritidshjem i 1983. I 2004 blev de to institutioner samlet under navnet Børnegården Katholt, og siden 2014 har vi fungeret som en privat institution med fælles bestyrelse.<br><br>Hos os ser vi barndommen som en livsfase, der skal leves og udforskes, ikke som et pensum, der skal gennemgås. Vi lægger vægt på tryghed, trivsel og udvikling gennem leg, fællesskab og tæt samarbejde med forældrene. Sammen skaber vi et miljø, hvor børn trives, lærer og vokser som unikke individer med plads til undren, kreativitet og glæde.</p>
+    <div class="text-center">
+        <h1 class="fw-bold">Velkommen til Børnegården Katholt</h1>
+        <button class="btn-primary">Button 1</button>
+        <button class="btn-primary">Button 2</button>
+    </div>
   </div>
-</section>
+  </header>
 
-  <script>
-    function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+  <section class="text-section">
+<p>Børnegården Katholt er en aldersintegreret institution med børnehave og fritidshjem, normeret til 175 børn. Vi har en lang historie, der går tilbage til 1973, hvor Unge Hjems Børnehave åbnede dørene. Senere fulgte Skjern Fritidshjem i 1983. I 2004 blev de to institutioner samlet under navnet Børnegården Katholt, og siden 2014 har vi fungeret som en privat institution med fælles bestyrelse.
+  <br><br>Hos os ser vi barndommen som en livsfase, der skal leves og udforskes, ikke som et pensum, der skal gennemgås. Vi lægger vægt på tryghed, trivsel og udvikling gennem leg, fællesskab og tæt samarbejde med forældrene. Sammen skaber vi et miljø, hvor børn trives, lærer og vokser som unikke individer med plads til undren, kreativitet og glæde.</p>
 
- // JavaScript to handle dropdown functionality
-  document.querySelectorAll('.dropbtn').forEach(button => {
-    button.addEventListener('click', function (event) {
-      event.stopPropagation();
 
-      // Get the associated dropdown content
-      const dropdownContent = this.nextElementSibling;
-
-      // Close all other dropdowns
-      document.querySelectorAll('.dropdown-content').forEach(content => {
-        if (content !== dropdownContent) {
-          content.classList.remove('show');
-        }
-      });
-
-      // Toggle the clicked dropdown
-      dropdownContent.classList.toggle('show');
-    });
-  });
-
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function () {
-    document.querySelectorAll('.dropdown-content').forEach(content => {
-      content.classList.remove('show');
-    });
-  });
-  </script>
+  </section>
 </body>
 <footer>
   <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -139,72 +121,41 @@
             </p>
           </div>
           <!-- Grid column -->
-
           <hr class="w-100 clearfix d-md-none" />
-
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Børnehave</h6>
-            <p>
-              <a class="text-black">Ny i børnehaven</a>
-            </p>
-            <p>
-              <a class="text-black">Praktiske oplysninger</a>
-            </p>
-            <p>
-              <a class="text-black">Selvbetjening i børnehaven</a>
-            </p>
+            <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+            <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
           </div>
           <!-- Grid column -->
-
           <hr class="w-100 clearfix d-md-none" />
-
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
               Fritidshjem
             </h6>
-            <p>
-              <a class="text-black">Ny i fritidshjemmet</a>
-            </p>
-            <p>
-              <a class="text-black">Praktiske oplysninger</a>
-            </p>
-            <p>
-              <a class="text-black">Selvbetjening i fritidshjemmet</a>
-            </p>
+            <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+            <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
           </div>
-
           <!-- Grid column -->
           <hr class="w-100 clearfix d-md-none" />
-
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Information</h6>
-            <p>
-              <a class="text-black">Kontakt</a>
-            </p>
-            <p>
-              <a class="text-black">Besøg og åbningstider</a>
-            </p>
-            <p>
-              <a class="text-black">Bestyrelse</a>
-            </p>
-            <p>
-              <a class="text-black">Studerende</a>
-            </p>
-            <p>
-              <a class="text-black">Sygdom/fravær</a>
-            </p>
+              <p><a href="info-kontakt.html">Kontakt</a></p>
+              <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+              <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+              <p><a href="info-studerende.html">Studerende</a></p>
           </div>
           <!-- Grid column -->
         </div>
         <!--Grid row-->
       </section>
       <!-- Section: Links -->
-
       <hr class="my-3">
-
       <!-- Section: Copyright -->
       <section class="p-3 pt-0">
         <div class="row d-flex align-items-center">
@@ -231,4 +182,3 @@
 <!-- End of .container -->
 </footer>
 </html>
-

@@ -4,28 +4,6 @@ body {
     font-family: 'PT Serif', serif;
   }
   
-  /* Navbar styling */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    font-size: 1.2rem; /* A bit larger than the original */
-    padding: 0.75rem; /* Slightly more padding */
-    height: 100px; /* Slightly taller */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar a {
-    font-family: 'Dekko', sans-serif;
-    text-decoration: none; /* Remove default underline */
-    color: #333; /* Text color */
-    padding: 10px;
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 1.2rem; /* A bit larger than the original */
-  }
-  
   #afterschoollink {
     font-family: 'Dekko', sans-serif;
     font-weight: bold;
@@ -38,181 +16,170 @@ body {
     font-size: 1.2rem; /* A bit larger than the original */
     border-bottom: 2px solid #000; /* Line under the link */
   }
-
   #afterschoolpractical {
   background-color: hsl(0, 0%, 90%);
   text-decoration: none !important;
 }
-  
-  .navbar-logo {
-    flex: 1;
-  }
-  
-  .navbar-logo img {
-    height: 60px;
-  }
-  
-  .navbar-links {
-    display: flex;
-    flex: 2;
-    justify-content: right;
-  }
-  
-  .navbar-links a {
-    margin: 0 15px;
-  }
-  
-  .navbar-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .dropdown{
-    display: inline-block;
-  }
-  
-  .dropdown button{
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-family: 'Dekko', sans-serif;
-    text-decoration: none; /* Remove default underline */
-    color: #333; /* Text color */
-    padding: 10px;
-    display: inline-block;
-    transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-    margin: 0 10px;
-    font-size: 1.2rem; /* A bit larger than the original */
-  }
-  .dropdown a{
-    display: block;
-    color: black;
-    text-decoration: none !important;
-    padding: 10px 15px;
-  }
-  .dropdown .content{
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.75rem; /* Slightly more padding */
+  height: 100px; /* Slightly taller */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Top Navigation */
+.topnav {
+  display: flex;
+  align-items: center;
+}
+
+.topnav a, 
+.dropdown-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Dekko', sans-serif;
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Text color */
+  padding: 10px;
+  display: inline-block;
+  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  margin: 0 10px;
+  font-size: 1.2rem; /* A bit larger than the original */
+}
+
+.topnav a:hover,
+.dropdown-button:hover {
+  font-weight: bold; /* Makes the text bold */
+  border-bottom: 2px solid #000; /* Line under the link */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  min-width: 200px;
+  text-decoration: none !important; /* Removes underline */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none !important;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: none; /* Removes any border-bottom */
+  text-decoration: none; /* Ensures underline is removed */
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-decoration: none !important;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger Icon - Hidden by Default */
+.icon {
+  display: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Hide the navigation links */
+  .topnav {
     display: none;
+    flex-direction: column;
+    background-color: white;
     position: absolute;
-    background-color: hsl(0, 0%, 95%);
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
-    text-decoration: none !important; /* Removes underline */
+    top: 60px;
+    left: 0;
+    width: 100%;
   }
-  .dropdown:hover .content{
+
+  .topnav.responsive {
+    display: flex; /* Show links when toggled */
+  }
+
+  /* Show Hamburger Menu */
+  .icon {
     display: block;
-    text-decoration: none; /* Ensure no underline on hover */
+    position: absolute;
+    top: 15px;
+    right: 20px;
   }
-  .dropdown:hover button{
-    font-weight: bold; /* Makes the text bold */
-    border-bottom: 2px solid #000; /* Line under the link */
-  }
-  .dropdown a:hover{
-    background-color: hsl(0, 0%, 90%);
-    text-decoration: none !important;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .navbar-links {
-        display: none; /* Hide links on smaller screens */
-    }
-  
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-  }
-  
-  /* Topnav styles */
-  .topnav a:hover {
-    font-weight: bold; /* Makes the text bold */
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-  
-  /* Responsive design for topnav */
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-  
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-  
-    .topnav.responsive {
-        position: relative;
-    }
-  
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-  
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-  }
-  
-  /* Dropdown menu styles */
+
+  /* Adjust dropdown for small screens */
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    position: static; /* Prevent overlap */
+    box-shadow: none;
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  /* Show dropdown when .show is added */
-  .dropdown-content.show {
-    display: block;
-  }
-  
-  header {
-    position: relative; /* Ensures the overlay is positioned relative to the header */
-    background-image: url('images/fritidshjem-banner-rød.svg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the header */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image tiling */
-    min-height: 500px; /* Sets the height of the header */
-    text-align: center; /* Centers the text */
-    color: white; /* Ensures text is visible */
-    display: flex; /* Centers content vertically and horizontally */
-    align-items: center;
-    justify-content: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
-  }
-  
-  
-  header h1 {
-    font-weight: 300; /* Light font-weight */
-    font-family: 'Dekko', sans-serif;
-  }
-  
-  header p {
-    color: white; /* Muted text */
-    font-family: 'PT Serif', serif;
-  }
+}
+
+header {
+  position: relative; /* Ensures the overlay is positioned relative to the header */
+  background-image: url('images/fritidshjem-banner-rød.svg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  min-height: 500px; /* Sets the height of the header */
+  text-align: center; /* Centers the text */
+  color: white; /* Ensures text is visible */
+  display: flex; /* Centers content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+}
+
+header h1 {
+  font-weight: 300; /* Light font-weight */
+  font-family: 'Dekko', sans-serif;
+  font-size: 29px;
+}
+
+header p {
+  color: white; /* Muted text */
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+}
   
   .btn-primary {
     background-color: #007bff; /* Bootstrap primary blue */
@@ -222,21 +189,27 @@ body {
   .btn-primary:hover {
     background-color: #0056b3; /* Darker blue for hover */
   }
-
   .footer {
     background-color: white;
     }
     
+    footer a {
+      color: black; /* Muted text */
+      font-family: 'PT Serif', serif;
+      font: 16px;
+    }
+    
     footer h6 {
       font-family: 'Dekko', sans-serif;
-      font-size: 24px; /* Adjust the size as needed */
+      font-size: 22px; /* Adjust the size as needed */
+      font-weight: bold;
     }
     
     footer p {
       color: black; /* Muted text */
       font-family: 'PT Serif', serif;
+      font: 16px;
     }
-
     .info-section {
       padding: 20px;
       background-color: white;
@@ -248,45 +221,32 @@ body {
       margin-bottom: 20px;
       color: black;
       font-family: 'Dekko', sans-serif;
-      font-size: 28px;
+      font-size: 22px;
     }
     
     .info-section p {
       margin-bottom: 20px;
 color: #555;
 font-family: 'PT Serif', serif;
-font-size: 18px;
+font-size: 16px;
     }
-    
-    .info-section ul {
+    .info-section b {
       margin-bottom: 20px;
-      color: #555;
-      font-family: 'PT Serif', serif;
-      font-size: 18px;
+color: black;
+font-family: 'PT Serif', serif;
+font-size: 16px;
     }
-
     .info-section li {
       margin-bottom: 20px;
       color: #555;
       font-family: 'PT Serif', serif;
-      font-size: 18px;
+      font-size: 16px;
     }
-    
-    .info-section ul li {
-      margin-bottom: 20px;
-color: #555;
-font-family: 'PT Serif', serif;
-font-size: 18px;
-      list-style-type: disc;
-    }
-
     .emoji {
       font-size: 18; /* Ændr størrelsen på emojis */
       margin-right: 8px; /* Giver mellemrum mellem emoji og tekst */
       display: inline-block; /* Sikrer korrekt justering */
       }
-
-
     .hand-drawn-line-blue {
       background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
       height: 10px;                /* Adjust height based on line style */

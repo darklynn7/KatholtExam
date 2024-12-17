@@ -3,29 +3,7 @@ body {
     margin: 0;
     font-family: 'PT Serif', serif;
   }
-  
-  /* Navbar styling */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    font-size: 1.2rem; /* A bit larger than the original */
-    padding: 0.75rem; /* Slightly more padding */
-    height: 100px; /* Slightly taller */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar a {
-    font-family: 'Dekko', sans-serif;
-    text-decoration: none; /* Remove default underline */
-    color: #333; /* Text color */
-    padding: 10px;
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 1.2rem; /* A bit larger than the original */
-  }
-  
+
   #daycarelink {
     font-family: 'Dekko', sans-serif;
     font-weight: bold;
@@ -38,181 +16,170 @@ body {
     font-size: 1.2rem; /* A bit larger than the original */
     border-bottom: 2px solid #000; /* Line under the link */
   }
-
   #newdaycareopen {
   background-color: hsl(0, 0%, 90%);
   text-decoration: none !important;
 }
-  
-  .navbar-logo {
-    flex: 1;
-  }
-  
-  .navbar-logo img {
-    height: 60px;
-  }
-  
-  .navbar-links {
-    display: flex;
-    flex: 2;
-    justify-content: right;
-  }
-  
-  .navbar-links a {
-    margin: 0 15px;
-  }
-  
-  .navbar-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .dropdown{
-    display: inline-block;
-  }
-  
-  .dropdown button{
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-family: 'Dekko', sans-serif;
-    text-decoration: none; /* Remove default underline */
-    color: #333; /* Text color */
-    padding: 10px;
-    display: inline-block;
-    transition: border-bottom 0.3s ease; /* Optional: smooth transition */
-    margin: 0 10px;
-    font-size: 1.2rem; /* A bit larger than the original */
-  }
-  .dropdown a{
-    display: block;
-    color: black;
-    text-decoration: none !important;
-    padding: 10px 15px;
-  }
-  .dropdown .content{
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.75rem; /* Slightly more padding */
+  height: 100px; /* Slightly taller */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Top Navigation */
+.topnav {
+  display: flex;
+  align-items: center;
+}
+
+.topnav a, 
+.dropdown-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Dekko', sans-serif;
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Text color */
+  padding: 10px;
+  display: inline-block;
+  transition: border-bottom 0.3s ease; /* Optional: smooth transition */
+  margin: 0 10px;
+  font-size: 1.2rem; /* A bit larger than the original */
+}
+
+.topnav a:hover,
+.dropdown-button:hover {
+  font-weight: bold; /* Makes the text bold */
+  border-bottom: 2px solid #000; /* Line under the link */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  min-width: 200px;
+  text-decoration: none !important; /* Removes underline */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none !important;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: none; /* Removes any border-bottom */
+  text-decoration: none; /* Ensures underline is removed */
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-decoration: none !important;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger Icon - Hidden by Default */
+.icon {
+  display: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Hide the navigation links */
+  .topnav {
     display: none;
+    flex-direction: column;
+    background-color: white;
     position: absolute;
-    background-color: hsl(0, 0%, 95%);
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
-    text-decoration: none !important; /* Removes underline */
+    top: 60px;
+    left: 0;
+    width: 100%;
   }
-  .dropdown:hover .content{
+
+  .topnav.responsive {
+    display: flex; /* Show links when toggled */
+  }
+
+  /* Show Hamburger Menu */
+  .icon {
     display: block;
-    text-decoration: none; /* Ensure no underline on hover */
+    position: absolute;
+    top: 15px;
+    right: 20px;
   }
-  .dropdown:hover button{
-    font-weight: bold; /* Makes the text bold */
-    border-bottom: 2px solid #000; /* Line under the link */
-  }
-  .dropdown a:hover{
-    background-color: hsl(0, 0%, 90%);
-    text-decoration: none !important;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .navbar-links {
-        display: none; /* Hide links on smaller screens */
-    }
-  
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-  }
-  
-  /* Topnav styles */
-  .topnav a:hover {
-    font-weight: bold; /* Makes the text bold */
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-  
-  /* Responsive design for topnav */
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-  
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-  
-    .topnav.responsive {
-        position: relative;
-    }
-  
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-  
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-  }
-  
-  /* Dropdown menu styles */
+
+  /* Adjust dropdown for small screens */
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    position: static; /* Prevent overlap */
+    box-shadow: none;
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  /* Show dropdown when .show is added */
-  .dropdown-content.show {
-    display: block;
-  }
-  
-  header {
-    position: relative; /* Ensures the overlay is positioned relative to the header */
-    background-image: url('images/daycare-banner-rød-fixet.svg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the header */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image tiling */
-    min-height: 500px; /* Sets the height of the header */
-    text-align: center; /* Centers the text */
-    color: white; /* Ensures text is visible */
-    display: flex; /* Centers content vertically and horizontally */
-    align-items: center;
-    justify-content: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
-  }
-  
-  
-  header h1 {
-    font-weight: 300; /* Light font-weight */
-    font-family: 'Dekko', sans-serif;
-  }
-  
-  header p {
-    color: white; /* Muted text */
-    font-family: 'PT Serif', serif;
-  }
+}
+
+header {
+  position: relative; /* Ensures the overlay is positioned relative to the header */
+  background-image: url('images/daycare-banner-rød-fixet.svg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  min-height: 500px; /* Sets the height of the header */
+  text-align: center; /* Centers the text */
+  color: white; /* Ensures text is visible */
+  display: flex; /* Centers content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+}
+
+header h1 {
+  font-weight: 300; /* Light font-weight */
+  font-family: 'Dekko', sans-serif;
+  font-size: 29px;
+}
+
+header p {
+  color: white; /* Muted text */
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+}
   
   .btn-primary {
     background-color: #007bff; /* Bootstrap primary blue */
@@ -222,21 +189,28 @@ body {
   .btn-primary:hover {
     background-color: #0056b3; /* Darker blue for hover */
   }
-
   .footer {
     background-color: white;
+    }
+
+    footer a {
+      color: black; /* Muted text */
+      font-family: 'PT Serif', serif;
+      font: 16px;
     }
     
     footer h6 {
       font-family: 'Dekko', sans-serif;
-      font-size: 24px; /* Adjust the size as needed */
+      font-size: 22px; /* Adjust the size as needed */
+      font-weight: bold;
     }
     
     footer p {
       color: black; /* Muted text */
       font-family: 'PT Serif', serif;
+      font: 16px;
     }
-
+    
     .site-section {
       padding: 50px 0;
       background-color: white;
@@ -245,24 +219,14 @@ body {
     .site-section .heading {
       font-size: 28px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 29px;
     }
     
     .site-section p {
       margin-bottom: 20px;
       color: #555;
       font-family: 'PT Serif', serif;
-      font-size: 18px;
-    }
-    
-    .site-section .list-unstyled li {
-      margin-bottom: 10px;
       font-size: 16px;
-    }
-    
-    .site-section .icon-check {
-      color: #32cd32; /* Green check icon color */
-      margin-right: 10px;
     }
     
     .img-fluid {
@@ -271,12 +235,6 @@ body {
       border-radius: 8px;
     }
     
-    .site-section h3 {
-      font-family: 'Dekko', sans-serif;
-      font-weight: bold; /* Makes the text bold */
-      text-align: center;
-    }
-
     .container-values {
       margin: 0 auto;
       padding: 20px;
@@ -301,12 +259,11 @@ body {
       gap: 30px;
       justify-content: center;
     }
-
     .subtitle {
       margin-bottom: 20px;
       color: #555;
       font-family: 'PT Serif', serif;
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
     }
     
@@ -344,120 +301,54 @@ body {
       margin-bottom: 20px;
       color: #555;
       font-family: 'PT Serif', serif;
-      font-size: 18px;
+      font-size: 16px;
       text-align: left;
     }
-
 .values-section {
   padding: 50px 0;
   background-color: white;
 }
-
 .values-section p {
 margin-bottom: 20px;
 color: #555;
 font-family: 'PT Serif', serif;
-font-size: 18px;
+font-size: 16px;
 }
-
-.values-section h3 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  font-family: 'Dekko', sans-serif;
-  text-align: center;
-}
-
 .values-section h6 {
   font-weight: bold;
   margin-bottom: 20px;
   color: black;
   font-family: 'Dekko', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
-
 .day-section {
   padding: 50px 0;
   background-color: white;
 }
-
 .day-section .list-unstyled li {
   margin-bottom: 10px;
   font-size: 16px;
 }
-
 .day-section .icon-check {
   color: #32cd32; /* Green check icon color */
   margin-right: 10px;
 }
-
-.day-section h3 {
-  font-family: 'Dekko', sans-serif;
-  font-weight: bold; /* Makes the text bold */
-}
-
 .day-section p {
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 18px;
+  font-size: 16px;
   }
-
   .day-section h6 {
     font-weight: bold;
     margin-bottom: 20px;
     color: black;
     font-family: 'Dekko', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
   }
-
-.grid-container {
-  background-color: white;
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centerer indholdet */
-    gap: 30px;
-    padding: 50 0;
-}
-
-.grid-item {
-  background-color: #ffc823; /* Baggrundsfarve */
-  border: 1px solid black; /* Kantfarve */
-  border-radius: 8px; /* Runde hjørner */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge */
-  padding: 20px; /* Indre afstand */
-  width: 500px; /* Fast bredde */
-  height: 400px; /* Fast højde */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden; /* Skjuler overskydende indhold */
-}
-
-.grid-item h6 {
-  font-weight: bold;
-    margin-bottom: 20px;
-    color: black;
-    font-family: 'Dekko', sans-serif;
-    font-size: 20px;
-}
-
-.grid-item p {
-  margin-bottom: 20px;
-  color: black;
-  font-family: 'PT Serif', serif;
-  font-size: 18px;
-  }
-
   .activities-section {
     padding: 40px;
     background-color: white;
-  }
-  
-  .activities-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
   }
   
   .activities-container {
@@ -498,7 +389,7 @@ font-size: 18px;
     margin-bottom: 20px;
     color: black;
     font-family: 'Dekko', sans-serif;
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
   }
   
@@ -507,15 +398,13 @@ font-size: 18px;
     margin-bottom: 20px;
     color: #555;
     font-family: 'PT Serif', serif;
-    font-size: 18px;
+    font-size: 16px;
   }
-
 /* Generel stil til containeren af galleriet */
 .section.bg-default {
   padding: 30px 0;
   background-color: white; /* Baggrundsfarve */
 }
-
 /* Layout og stil for hver kolonne i galleriet */
 .col-lg-4.col-sm-6 {
   padding: 10px;
@@ -523,100 +412,27 @@ font-size: 18px;
   justify-content: center;
   align-items: center;
 }
-
-/* Galleribillederne */
-.gallery-thumbnail img {
-  width: 100%; /* Gør billederne responsive */
-  border-radius: 8px; /* Rundede hjørner */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skærm-effekt */
-  transition: transform 0.3s, box-shadow 0.3s; /* Glidende effekt ved hover */
-}
-
-/* Effekten ved hover */
-.gallery-thumbnail img:hover {
-  transform: scale(1.05); /* Forstørrer billedet lidt */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Skærm-effekt ved hover */
-}
-
-
-.gallery-thumbnail {
-	display: block;
-	max-width: 390px;
-	margin-right: auto;
-	margin-left: auto;
-	position: relative;
-	overflow: hidden;
-}
-
-.gallery-thumbnail .float-title {
-	color: white;
-	font-weight: 600;
-	font-family: "Ibarra Real Nova", serif;
-	line-height: 1.1;
-	position: absolute;
-	bottom: 43px;
-	transition: all 0.3s ease-in-out;
-	text-align: center;
-	left: 15px;
-	right: 15px;
-	display: block;
-	font-size: 28px;
-}
-
-@media (min-width: 992px) {
-	.gallery-thumbnail .float-title {
-		font-size: 30px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.gallery-thumbnail .float-title {
-		opacity: 0;
-		font-size: 36px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.gallery-thumbnail:hover .float-title {
-		opacity: 1;
-		transition: all 0.3s ease-in-out;
-	}
-}
-
 .traditions-section {
   padding: 50px 0;
   background-color: white;
 }
-
 .traditions-section p {
 margin-bottom: 20px;
 color: #555;
 font-family: 'PT Serif', serif;
-font-size: 18px;
+font-size: 16px;
 }
-
-.traditions-section h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  font-family: 'Dekko', sans-serif;
-  text-align: center;
-  font-size: 20px;
-}
-
 .traditions-section h4 {
   font-weight: bold;
   margin-bottom: 20px;
   color: black;
   font-family: 'Dekko', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
-
 .service-item {
   position: relative;
   padding-left: 80px;
 }
-
 .service-item i {
   position: absolute;
   left: 0px;
@@ -624,21 +440,18 @@ font-size: 18px;
   font-size: 50px;
   opacity: .4;
 }
-
 .menu-container {
   width: 90%;
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
 }
-
 .menu-container p {
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 18px;
+  font-size: 16px;
 }
-
 .aligned-list-numberless {
   margin-left: 5px; /* Matches the container's padding */
   padding-left: 0; /* Removes unnecessary inner padding */
@@ -646,9 +459,8 @@ font-size: 18px;
   margin-bottom: 20px;
 color: #555;
 font-family: 'PT Serif', serif;
-font-size: 18px;
+font-size: 16px;
 }
-
 .aligned-list-numberless b {
   margin-left: 5px; /* Matches the container's padding */
   padding-left: 0; /* Removes unnecessary inner padding */
@@ -656,9 +468,8 @@ font-size: 18px;
   margin-bottom: 20px;
 color: black;
 font-family: 'PT Serif', serif;
-font-size: 18px;
+font-size: 16px;
 }
-
 .aligned-list {
   margin-left: 5px; /* Matches the container's padding */
   padding-left: 0; /* Removes unnecessary inner padding */
@@ -666,7 +477,6 @@ font-size: 18px;
   list-style: none; /* Remove default numbering */
   counter-reset: list-counter; /* Initialize counter */
 }
-
 .aligned-list li {
   counter-increment: list-counter; /* Increment counter for each <li> */
   margin-left: 0; /* Ensure alignment */
@@ -675,43 +485,29 @@ font-size: 18px;
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 18px;
+  font-size: 16px;
 }
-
 .aligned-list li::before {
   content: counter(list-counter) ". "; /* Add custom numbers */
   font-weight: bold; /* Make numbers bold */
-  font-size: 1.5em; /* Increase size of numbers */
   margin-right: 8px; /* Add spacing between number and text */
   color: inherit; /* Inherit text color */
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Dekko', sans-serif;
 }
-
-
-/* Menu Title and Introduction */
-.menu-title {
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .menu-intro {
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 18px;
+  font-size: 16px;
 }
-
 /* Grid Layout */
 .menu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
-
 /* Left Column */
 .menu-subtitle {
   font-size: 1.5rem;
@@ -719,29 +515,25 @@ font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .menu-item {
   margin-bottom: 20px;
 }
-
 .item-title {
-  font-size: 1.2rem;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Dekko', sans-serif;
+  text-align: center;
 }
-
-.price {
-  font-size: 1.2rem;
-  color: #555;
-}
-
 .item-description {
-  font-size: 0.95rem;
   margin-top: 5px;
+  margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+font-size: 16px;
 }
-
 /* Right Column Image */
 .circle-image {
   display: flex;
@@ -749,71 +541,45 @@ font-size: 18px;
   align-items: center;
   margin: 20px auto; /* Centers it horizontally with auto margins */
 }
-
 .circle-image img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
 }
-
 .food-section p ol li {
 margin-bottom: 20px;
 color: #555;
 font-family: 'PT Serif', serif;
-font-size: 18px;
+font-size: 16px;
 }
-
 .food-section h3 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
   font-family: 'Dekko', sans-serif;
   text-align: center;
   }
-
-  .food-section h6 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: black;
-    font-family: 'Dekko', sans-serif;
-    font-size: 20px;
-    }
-
-  
-
-.banner {
-  background-image: url('images/mad-i-boernehaven.jpg'); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  height: 200px; /* Adjust the height as needed */
-  width: 100%; /* Makes the banner span the full width of the viewport */
-}
-
 .hand-drawn-line-blue {
   background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
   height: 10px;                /* Adjust height based on line style */
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
-
 .hand-drawn-line-green {
   background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
   height: 10px;                /* Adjust height based on line style */
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
-
 .hand-drawn-line-yellow {
   background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
   height: 10px;                /* Adjust height based on line style */
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
-
 .hand-drawn-line-red {
   background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
   height: 10px;                /* Adjust height based on line style */
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
-
 #blyanter {
   height: 70px; /* Matches the font size */
   width: auto; /* Maintains aspect ratio */

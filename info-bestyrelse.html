@@ -1,550 +1,262 @@
 <!DOCTYPE html>
-
 <html lang="da">
-
 <head>
-
+  <meta name=”robots” content=”noindex”>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="info-bestyrelse.css">
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
-
   <title>Børnegården Katholt</title>
-
 </head>
-
 <body>
-
   <nav class="navbar">
-
     <!-- Left: Logo -->
-
     <div class="navbar-logo">
-
-      <a href="#"><img src="images/Katholt-logo.png" alt="Logo"></a>
-
+      <a href="index.html"><img src="images/Katholt-logo.png" alt="Logo"></a>
     </div>
 
- 
-
+    <!-- Navigation Links -->
     <div class="topnav" id="myTopnav">
-
       <a href="index.html">Velkommen</a>
 
       <div class="dropdown">
-
-        <button class="dropbtn">Børnehave
-
-          <i class="fa fa-caret-down"></i>
-
-        </button>
-
+        <button class="dropdown-button">Børnehave <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
-
           <a href="ny-børnehave.html">Ny i børnehaven</a>
-
           <a href="børne-praktisk.html">Praktiske oplysninger</a>
-
           <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
-
- 
-
         </div>
-
       </div>
 
       <div class="dropdown">
-
-        <button class="dropbtn">Fritidshjem
-
-          <i class="fa fa-caret-down"></i>
-
-        </button>
-
+        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
-
           <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
-
           <a href="fritid-praktisk.html">Praktiske oplysninger</a>
-
           <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
-
- 
-
         </div>
-
       </div>
+
       <a href="stamkort.html">Stamkort/børneintranet</a>
 
       <div class="dropdown">
-
-        <button class="dropbtn" class="active" id="infolink">Information
-
-          <i class="fa fa-caret-down"></i>
-
-        </button>
-
+        <button class="dropdown-button" class="active" id="infolink">Information <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
-
           <a href="info-kontakt.html">Kontakt</a>
-
-          <a href="info-besøg.html">Besøg og åbningstider</a>
-
-          <a href="info-bestyrelse.html" id="infoboard">Forældre bestyrelse</a>
-
+          <a href="info-besøg.html">Åbningstider og lukkedage</a>
+          <a href="info-bestyrelse.html" id="infoboard">Bestyrelse</a>
           <a href="info-studerende.html">Studerende</a>
-
-          <a href="info-sygdom.html">Sygdom/fravær</a>
-
         </div>
-
       </div>
-
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-
-        <i class="fa fa-bars"></i>
-
-      </a>
-
     </div>
 
+    <!-- Hamburger Menu Icon -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </nav>
 
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      x.classList.toggle("responsive");
+    }
+  </script>
  
-
 <!-- Header Section -->
-
 <header class="py-5 bg-light mb-4">
-
 <div class="container">
-
   <div class="text-center">
-
       <h1 class="fw-bold">Forældrebestyrelse</h1>
-
-      <p class="lead">Lorem ipsum</p>
-
+      <p class="lead">Vi er taknemlige for det tætte samarbejde vi har med bestyrelsen</p>
   </div>
-
 </div>
-
 </header>
-
-
-
   <section class="text-section">
-      <img src="images/blyant-børnehaven.svg" alt="Image" id="blyanter">
+      <img src="images/blyant-børnehaven.svg" alt="børnehaven blyant" id="blyanter">
       <br>
-
  
-
+<p>Overblik over hvilke forældre der sidder med i bestyrelsen hos børnehaven.</p>
       <ul>
-
         <li><strong>Martin T. Nielsen</strong> - far til Oskar Blå stue </li>
-
         <li><strong>Brian B Kristensen</strong> - far til Frederik Grøn stue </li>
-
         <li><strong>Christina K Letager</strong> - mor til Sigrid Rød stue </li>
-
         <li><strong>Linette Jensen</strong> - mor til Freja Blå stue</li>
-
     </ul>
-
-      <p>Personale: Gerda Bertelsen</p>
-
+      <p><u>Personale:</u> Gerda Bertelsen</p>
      <br>
-
   </section>
-
   <br><br>
   <div class="hand-drawn-line-blue"></div>
   <br><br>
-
      <section class="text-section">
  
-
-      <img src="images/blyant-fritidshjemmet.svg" alt="Image" id="blyanter">
+      <img src="images/blyant-fritidshjemmet.svg" alt="fritidshjemmet blyant" id="blyanter">
       <br>
-
  
-
+<p>Overblik over hvilke forældre der sidder med i bestyrelsen hos fritidshjemmet.</p>
       <ul>
-
         <li><strong>Phillip Poulsen</strong> - far til Maggie 2.kl.</li>
-
         <li><strong>Didde Damgaard </strong>- mor til Nynne Rasmussen 3. kl.</li>
-
         <li><strong>Jesper L Korsholm</strong> - far til Bertram 2.kl. og Silja 1.kl</li>
-
         <li><strong>Suppl.: Lisette Andersen</strong> - Victor 2. kl.</li>
-
     </ul>
-
-      <p>Personale: Tina Pontoppidan</p>
-
+      <p><u>Personale:</u> Tina Pontoppidan</p>
     <br>
-
      </section>
-
      <br><br>
      <div class="hand-drawn-line-green"></div>
      <br><br>
-
      <section class="text-section">
-
-    <img src="images/blyant-forretning.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-forretning.svg" alt="forretningsudvalget blyant" id="blyanter">
     <br>
-
  
-
+<p>Overblik over hvem der sidder med i bestyrelsen hos forretningsudvalget.</p>
     <ul>
-
       <li><strong> Formand:</strong> Knud Hougaard Klausen</li>
-
       <li><strong>Næst formand: </strong>Poul Nielsen</li>
-
       <li><strong>Bestyrelsesmedlem:</strong> Berit Olesen </li>
-
       <li><strong>Sekretær:</strong> Sarah Pontoppidan</li>
-
       <li><strong>Leder:</strong> Ulla Larsen</li>
-
   </ul>
-
      </section>
-
      <br><br>
      <div class="hand-drawn-line-yellow"></div>
      <br><br>
-
    
-
  
-
    
-
-
-
-
-
-
-
-
-
-
   <script>
-
     function myFunction() {
-
   var x = document.getElementById("myTopnav");
-
   if (x.className === "topnav") {
-
     x.className += " responsive";
-
   } else {
-
     x.className = "topnav";
-
   }
-
 }
-
  
-
 // JavaScript to handle dropdown functionality
-
   document.querySelectorAll('.dropbtn').forEach(button => {
-
     button.addEventListener('click', function (event) {
-
       event.stopPropagation();
-
  
-
       // Get the associated dropdown content
-
       const dropdownContent = this.nextElementSibling;
-
  
-
       // Close all other dropdowns
-
       document.querySelectorAll('.dropdown-content').forEach(content => {
-
         if (content !== dropdownContent) {
-
           content.classList.remove('show');
-
         }
-
       });
-
  
-
       // Toggle the clicked dropdown
-
       dropdownContent.classList.toggle('show');
-
     });
-
   });
-
  
-
   // Close dropdowns when clicking outside
-
   document.addEventListener('click', function () {
-
     document.querySelectorAll('.dropdown-content').forEach(content => {
-
       content.classList.remove('show');
-
     });
-
   });
-
   </script>
-
 </body>
-
 <footer>
-
     <!-- Remove the container if you want to extend the Footer to full width. -->
-
   <div class="container my-5">
-
     <!-- Footer -->
-
     <footer
-
             class="text-center text-lg-start text-black"
-
             >
-
       <!-- Grid container -->
-
       <div class="container p-4 pb-0">
-
         <!-- Section: Links -->
-
         <section class="">
-
           <!--Grid row-->
-
           <div class="row">
-
             <!-- Grid column -->
-
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-
               <h6 class="text-uppercase mb-4 font-weight-bold">
-
                 Børnegården Katholt
-
               </h6>
-
               <p>
-
                 Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
-
                 Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
-
               </p>
-
             </div>
-
             <!-- Grid column -->
-
  
-
             <hr class="w-100 clearfix d-md-none" />
-
  
-
             <!-- Grid column -->
-
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-
               <h6 class="text-uppercase mb-4 font-weight-bold">Børnehave</h6>
-
-              <p>
-
-                <a class="text-black">Ny i børnehaven</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Praktiske oplysninger</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Selvbetjening i børnehaven</a>
-
-              </p>
-
+              <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+              <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+              <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
             </div>
-
             <!-- Grid column -->
-
- 
-
+  
             <hr class="w-100 clearfix d-md-none" />
-
- 
-
+  
             <!-- Grid column -->
-
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-
               <h6 class="text-uppercase mb-4 font-weight-bold">
-
                 Fritidshjem
-
               </h6>
-
-              <p>
-
-                <a class="text-black">Ny i fritidshjemmet</a>
-
-              </p>
-
-             <p>
-
-                <a class="text-black">Praktiske oplysninger</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Selvbetjening i fritidshjemmet</a>
-
-              </p>
-
+              <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+              <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+              <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
             </div>
-
- 
-
+  
             <!-- Grid column -->
-
             <hr class="w-100 clearfix d-md-none" />
-
- 
-
+  
             <!-- Grid column -->
-
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-
               <h6 class="text-uppercase mb-4 font-weight-bold">Information</h6>
-
-             <p>
-
-                <a class="text-black">Kontakt</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Besøg og åbningstider</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Bestyrelse</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Studerende</a>
-
-              </p>
-
-              <p>
-
-                <a class="text-black">Sygdom/fravær</a>
-
-              </p>
-
+                <p><a href="info-kontakt.html">Kontakt</a></p>
+                <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+                <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+                <p><a href="info-studerende.html">Studerende</a></p>
             </div>
-
             <!-- Grid column -->
-
           </div>
-
           <!--Grid row-->
-
         </section>
-
         <!-- Section: Links -->
-
  
-
         <hr class="my-3">
-
  
-
         <!-- Section: Copyright -->
-
         <section class="p-3 pt-0">
-
           <div class="row d-flex align-items-center">
-
             <!-- Grid column -->
-
             <div class="col-md-7 col-lg-8 text-center text-md-start">
-
               <!-- Copyright -->
-
               <div class="p-3">
-
                 © 2024 Copyright:
-
                 <a class="text-black" href="https://www.boernegaardenkatholt.dk/"
-
                    >Børnegården Katholt</a>
-
                    <span class="footer-text ms-3"><b>Made for educational purposes only</b></span>
-
               </div>
-
               <!-- Copyright -->
-
             </div>
-
             <!-- Grid column -->
-
           </div>
-
         </section>
-
         <!-- Section: Copyright -->
-
       </div>
-
       <!-- Grid container -->
-
     </footer>
-
     <!-- Footer -->
-
   </div>
-
   <!-- End of .container -->
-
   </footer>
-
   </html>

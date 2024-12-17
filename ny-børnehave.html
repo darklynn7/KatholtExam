@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
+  <meta name=”robots” content=”noindex”>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="ny-børnehave.css">
@@ -15,52 +16,56 @@
   <nav class="navbar">
     <!-- Left: Logo -->
     <div class="navbar-logo">
-      <a href="#"><img src="images/Katholt-logo.png" alt="Logo"></a>
+      <a href="index.html"><img src="images/Katholt-logo.png" alt="Logo"></a>
     </div>
-  
+
+    <!-- Navigation Links -->
     <div class="topnav" id="myTopnav">
       <a href="index.html">Velkommen</a>
+
       <div class="dropdown">
-        <button class="dropbtn" class="active" id="daycarelink">Børnehave
-          <i class="fa fa-caret-down"></i>
-        </button>
+        <button class="dropdown-button" class="active" id="daycarelink">Børnehave <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
-          <a href="ny-børnehave.html" id="newdaycareopen">Ny i børnehaven</a>
+          <a href="ny-børnehave.html" id="newdaycareopen" >Ny i børnehaven</a>
           <a href="børne-praktisk.html">Praktiske oplysninger</a>
           <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
-
         </div>
       </div>
+
       <div class="dropdown">
-        <button class="dropbtn">Fritidshjem
-          <i class="fa fa-caret-down"></i>
-        </button>
+        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
           <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
           <a href="fritid-praktisk.html">Praktiske oplysninger</a>
           <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
-
         </div>
       </div>
+
       <a href="stamkort.html">Stamkort/børneintranet</a>
+
       <div class="dropdown">
-        <button class="dropbtn">Information
-          <i class="fa fa-caret-down"></i>
-        </button>
+        <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
           <a href="info-kontakt.html">Kontakt</a>
-          <a href="info-besøg.html">Besøg og åbningstider</a>
+          <a href="info-besøg.html">Åbningstider og lukkedage</a>
           <a href="info-bestyrelse.html">Bestyrelse</a>
           <a href="info-studerende.html">Studerende</a>
-          <a href="info-sygdom.html">Sygdom/fravær</a>
         </div>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
     </div>
+
+    <!-- Hamburger Menu Icon -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </nav>
 
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      x.classList.toggle("responsive");
+    }
+  </script>
  <!-- Header Section -->
  <header class="py-5 bg-light mb-4">
 <div class="container">
@@ -70,14 +75,13 @@
   </div>
 </div>
 </header>
-
 <div class="site-section">
   <div class="container">
-    <img src="images/velkommen-børn-outline.svg" alt="Image" id="blyanter">
+    <img src="images/velkommen-børn-outline.svg" alt="velkommen i børnehaven blyant" id="blyanter">
     <br>
     <div class="row">
       <div class="col-md-6">
-        <img src="images/velkommen-børn.jpg" alt="Image" class="img-fluid">
+        <img src="images/velkommen-børn.jpg" alt="barn leger med lego dublo" class="img-fluid">
       </div>
       <div class="col-md-5 ml-auto pl-md-5">
         <br>
@@ -87,11 +91,10 @@
   </div>
   </div>
   <br><br>
-
   <div class="hand-drawn-line-blue"></div>
   <br><br>
   <br><br>
-  <img src="images/værdier-rigtig.svg" alt="Image" id="blyanter">
+  <img src="images/værdier-rigtig.svg" alt="vores værdier og fokusområder blyant" id="blyanter">
   <br>
   <p class="subtitle">Hos Børnegården Katholt ses barndom og institutionslivet som en livsfase, som skal leves og udleves, og ikke som et pensum.</p>
   <section class="core-values">
@@ -134,14 +137,12 @@
       </div>
     </div>
   </section>
-
 <br><br>
 <div class="hand-drawn-line-green"></div>
 <br><br>
-
 <div class="day-section">
   <div class="container">
-    <img src="images/dag-børn-rigtig.svg" alt="Image" id="blyanter">
+    <img src="images/dag-børn-rigtig.svg" alt="en dag i børnehaven/dagsrytme blyant" id="blyanter">
     <br>
     <div class="row">
       <div class="col-md-5 ml-auto pr-md-5">
@@ -163,7 +164,7 @@
         </p>
       </div>
       <div class="col-md-6">
-        <img src="images/børn-skema-dotted.svg" alt="Image" class="img-fluid">
+        <img src="images/børn-skema-dotted.svg" alt="børnehavens skema" class="img-fluid">
         <br><br>
         <span>
           <h6>Udeliv i nærmiljøet</h6>
@@ -175,34 +176,28 @@
     </div>
   </div>
 </div>
-
 <br><br>
 <div class="hand-drawn-line-yellow"></div>
 <br><br>
-
 <section id="activities" class="activities-section">
-  <img src="images/faciliteter-børn-rigtig.svg" alt="Image" id="blyanter">
+  <img src="images/faciliteter-børn-rigtig.svg" alt="vores faciliteter blyant" id="blyanter">
 <br>
 <br>
   <div class="activities-container">
     <div class="activity-item">
-      <img src="images/kreativ-ler.webp" alt="Kreativt værksted" />
+      <img src="images/legeplads copy.webp" alt="barn leger på legepladsen" />
       <h3>Legeplads</h3>
       <p>Vores store legeplads byder på masser af muligheder for leg og oplevelser</p>
     </div>
-
     <div class="activity-item">
-      <img src="images/Gymnastiksal-3.webp" alt="Gymnastiksal" />
+      <img src="images/Unknown copy.webp" alt="barn og pædagog leger i gymnastiksalen" />
       <h3>Gymnastiksal</h3>
       <p>Vores store dejlige gymnastiksal giver børnene de bedste betingelser for motorisk udfoldelse om formiddagen.</p>
     </div>
-
 </section>
-
             <br><br>
 <div class="hand-drawn-line-red"></div>
 <br><br>
-
 <!-- Section Services Start -->
 <section class="section service border-top">
   <div class="traditions-section">
@@ -210,13 +205,12 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-7 text-center">
 				<div class="section-title">
-          <img src="images/traditioner-børn-rigtig.svg" alt="Image" id="blyanter">
+          <img src="images/traditioner-børn-rigtig.svg" alt="traditioner i børnehaven blyant" id="blyanter">
           <br>
           <p>I børnehaven har vi en del traditioner.</p>
 				</div>
 			</div>
 		</div>
-
 		<!-- Første række med 4 elementer -->
 		<div class="row justify-content-center">
 			<div class="col-lg-3 col-md-6 col-sm-6">
@@ -226,7 +220,6 @@
 					<p>Hvert år fejrer vi fastelavn med børnene. Op til festen laver vi pynt, bager fastelavnsboller og afslutter med tøndeslagning, hvor børnene gerne må komme udklædte.</p>
 				</div>
 			</div>
-
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="service-item mb-5">
 					<i class="fa-solid fa-egg"></i>
@@ -234,7 +227,6 @@
 					<p>Inden påske klipper og klistrer vi kreativt påskepynt som gækkebreve, påskeæg og små dekorationer til højtiden.</p>
 				</div>
 			</div>
-
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="service-item mb-5">
 					<i class="fa-solid fa-candy-cane"></i>
@@ -242,7 +234,6 @@
 					<p>Vi laver julepynt, bager julekager og går til julegudstjeneste. Efter kirken spiser vi risengrød og får besøg af julemanden. Omkring 1. dec har vi julehygge med Lucia-optræden for familien.</p>
 				</div>
 			</div>
-
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="service-item mb-5 mb-lg-0">
 					<i class="fa-solid fa-user-group"></i>
@@ -251,7 +242,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- Anden række med 3 elementer -->
 		<div class="row justify-content-center">
 			<div class="col-lg-4 col-md-6 col-sm-6">
@@ -261,7 +251,6 @@
 					<p>Børns fødselsdage fejres i børnehaven eller hjemme med gruppen, aftalt med personalet. Vi prioriterer sunde fødselsdage med alternativer til slik og ingen sodavand. Fødselsdage holdes ikke på personalemødedage, som står i barnets garderobe.</p>
 				</div>
 			</div>
-
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-5 mb-lg-0">
 					<i class="fa-solid fa-person-walking-with-cane"></i>
@@ -269,7 +258,6 @@
 					<p>Hver forår inviterer vi bedsteforældrene til en hyggelig dag. Har barnet ikke bedsteforældre, er andre nære relationer meget velkomne, så alle børn kan få besøg.</p>
 				</div>
 			</div>
-
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-5 mb-lg-0">
           <i class="fa-solid fa-camera"></i>
@@ -281,14 +269,12 @@
 	</div>
 </div>
 </section>
-
 <br><br>
 <div class="hand-drawn-line-blue"></div>
 <br><br>
-
 <div class="food-section">
   <div class="menu-container">
-    <img src="images/mad-børn-rigtig.svg" alt="Image" id="blyanter">
+    <img src="images/mad-børn-rigtig.svg" alt="mad og kostpolitik blyant" id="blyanter">
     <br>
       <!-- Menu Title and Introduction -->
       <p class="menu-intro">Exclusive European cuisine, custom cakes and the finest aroma of exquisite pastries from the best confectioners create.</p>
@@ -371,19 +357,16 @@
                       </li>
                   </ul>
               </div>
-
               <br>
               <!-- Menu Image -->
               <div class="circle-image">
-                  <img src="images/mad-i-boernehaven.jpg" alt="Delicious Salad">
+                  <img src="images/mad-i-boernehaven.jpg" alt="mad i børnehaven">
               </div>
           </div>
       </div>
   </div>
-
 <br><br>
   <div class="hand-drawn-line-green"></div>
-
 </section>
   <script>
     function myFunction() {
@@ -394,27 +377,22 @@
     x.className = "topnav";
   }
 }
-
  // JavaScript to handle dropdown functionality
   document.querySelectorAll('.dropbtn').forEach(button => {
     button.addEventListener('click', function (event) {
       event.stopPropagation();
-
       // Get the associated dropdown content
       const dropdownContent = this.nextElementSibling;
-
       // Close all other dropdowns
       document.querySelectorAll('.dropdown-content').forEach(content => {
         if (content !== dropdownContent) {
           content.classList.remove('show');
         }
       });
-
       // Toggle the clicked dropdown
       dropdownContent.classList.toggle('show');
     });
   });
-
   // Close dropdowns when clicking outside
   document.addEventListener('click', function () {
     document.querySelectorAll('.dropdown-content').forEach(content => {
@@ -453,15 +431,9 @@
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Børnehave</h6>
-              <p>
-                <a class="text-black">Ny i børnehaven</a>
-              </p>
-              <p>
-                <a class="text-black">Praktiske oplysninger</a>
-              </p>
-              <p>
-                <a class="text-black">Selvbetjening i børnehaven</a>
-              </p>
+              <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+              <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+              <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
             </div>
             <!-- Grid column -->
   
@@ -472,15 +444,9 @@
               <h6 class="text-uppercase mb-4 font-weight-bold">
                 Fritidshjem
               </h6>
-              <p>
-                <a class="text-black">Ny i fritidshjemmet</a>
-              </p>
-              <p>
-                <a class="text-black">Praktiske oplysninger</a>
-              </p>
-              <p>
-                <a class="text-black">Selvbetjening i fritidshjemmet</a>
-              </p>
+              <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+              <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+              <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
             </div>
   
             <!-- Grid column -->
@@ -489,21 +455,10 @@
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Information</h6>
-              <p>
-                <a class="text-black">Kontakt</a>
-              </p>
-              <p>
-                <a class="text-black">Besøg og åbningstider</a>
-              </p>
-              <p>
-                <a class="text-black">Bestyrelse</a>
-              </p>
-              <p>
-                <a class="text-black">Studerende</a>
-              </p>
-              <p>
-                <a class="text-black">Sygdom/fravær</a>
-              </p>
+                <p><a href="info-kontakt.html">Kontakt</a></p>
+                <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+                <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+                <p><a href="info-studerende.html">Studerende</a></p>
             </div>
             <!-- Grid column -->
           </div>

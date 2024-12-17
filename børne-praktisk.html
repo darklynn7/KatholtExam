@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
+  <meta name=”robots” content=”noindex”>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="børne-praktisk.css">
@@ -15,51 +16,56 @@
   <nav class="navbar">
     <!-- Left: Logo -->
     <div class="navbar-logo">
-      <a href="#"><img src="images/Katholt-logo.png" alt="Logo"></a>
+      <a href="index.html"><img src="images/Katholt-logo.png" alt="Logo"></a>
     </div>
-  
+
+    <!-- Navigation Links -->
     <div class="topnav" id="myTopnav">
       <a href="index.html">Velkommen</a>
-      <div class="dropdown">
-        <button class="dropbtn" class="active" id="daycarelink">Børnehave
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="ny-børnehave.html">Ny i børnehaven</a>
-          <a href="børne-praktisk.html" id="daycarepractical">Praktiske oplysninger</a>
-          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
 
+      <div class="dropdown">
+        <button class="dropdown-button" class="active" id="daycarelink">Børnehave <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="ny-børnehave.html" id="daycarepractical">Ny i børnehaven</a>
+          <a href="børne-praktisk.html">Praktiske oplysninger</a>
+          <a href="børne-indmeld.html">Ind- og udmeldelse/takster</a>
         </div>
       </div>
+
       <div class="dropdown">
-        <button class="dropbtn">Fritidshjem
-          <i class="fa fa-caret-down"></i>
-        </button>
+        <button class="dropdown-button">Fritidshjem <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
           <a href="ny-fritidshjem.html">Ny i fritidshjemmet</a>
           <a href="fritid-praktisk.html">Praktiske oplysninger</a>
           <a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a>
-
         </div>
       </div>
+
       <a href="stamkort.html">Stamkort/børneintranet</a>
+
       <div class="dropdown">
-        <button class="dropbtn">Information
-          <i class="fa fa-caret-down"></i>
-        </button>
+        <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
           <a href="info-kontakt.html">Kontakt</a>
-          <a href="info-besøg.html">Besøg og åbningstider</a>
+          <a href="info-besøg.html">Åbningstider og lukkedage</a>
           <a href="info-bestyrelse.html">Bestyrelse</a>
           <a href="info-studerende.html">Studerende</a>
-          <a href="info-sygdom.html">Sygdom/fravær</a>
         </div>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
     </div>
+
+    <!-- Hamburger Menu Icon -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </nav>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      x.classList.toggle("responsive");
+    }
+  </script>
 
  <!-- Header Section -->
  <header class="py-5 bg-light mb-4">
@@ -72,7 +78,7 @@
 </header>
 
 <section class="info-section">
-    <img src="images/blyant-påklædning.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-påklædning.svg" alt="påklædning blyant" id="blyanter">
     <br>
 <p>Vi bruger legepladsen, skoven og naturen omkring børnehaven flittigt – derfor er det vigtigt, at børnene er klædt godt på efter vejrforholdene.</p>
 <br>
@@ -100,7 +106,7 @@
 <br><br>
 
 <section class="info-section">
-  <img src="images/blyant-legetøj.svg" alt="Image" id="blyanter">
+  <img src="images/blyant-legetøj.svg" alt="legetøj blyant" id="blyanter">
 <br>
 <p>Børnene er velkomne til at tage legetøj, en bog eller en CD med, så de kan dele glæden med de andre børn.</p>
 <br>
@@ -120,7 +126,7 @@
 <br><br>
 
 <section class="info-section">
-    <img src="images/blyant-aflevering.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-aflevering.svg" alt="aflevering og afhentning blyant" id="blyanter">
     <br>
     <h3><span class="emoji">🕒</span>Børnehavens ansvar</h3>
     <p>Børnehavens ansvar begynder når barnet er afleveret til personalet, og ophører når forældrene har sagt farvel.</p>
@@ -143,7 +149,7 @@
 <br><br>
 
 <section class="info-section">
-    <img src="images/blyant-sygdom.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-sygdom.svg" alt="sygdom/fravær blyant" id="blyanter">
     <br>
 <p>Når barnet er sygt må det ikke komme i børnehave.</p>
 <li>Sygdom kan smitte andre børn og personale.</li>
@@ -168,7 +174,7 @@
 <br><br>
 
   <section class="info-section">
-    <img src="images/blyant-forældresamarbejde.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-forældresamarbejde.svg" alt="forældresamarbejde blyant" id="blyanter">
     <br>
     <p>Personalet i børnehaven lægger vægt på et godt samarbejde med forældrene. Vi tror på, at jo bedre vi samarbejder, desto bedre trives barnet.</p>
     <p><b>Vi ønsker at:</b></p>
@@ -179,7 +185,6 @@
       <li>Være støttende, vejledende og opsøgende og tør at gøre noget ved tingene</li>
       <li>Handle med indfølelse og indlevelse</li>
       <li>Være åbne for ris og ros</li>
-    </ul>
   </div>
 </section>
 
@@ -188,7 +193,7 @@
 <br><br>
 
   <section class="info-section">
-    <img src="images/blyant-personalemøder.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-personalemøder.svg" alt="personalemøder/stuemøder blyant" id="blyanter">
     <br>
     <p>Fritidshjemmets personale passer børnehavebørnene en gang ugentligt over middag mens børnehavens personale holder personalemøde og stuemøde.</p>
     <br>
@@ -216,7 +221,7 @@
 <br><br>
 
   <section class="info-section">
-    <img src="images/blyant-personalesamarbejde.svg" alt="Image" id="blyanter">
+    <img src="images/blyant-personalesamarbejde.svg" alt="personalesamarbejde blyant" id="blyanter">
     <br>
     <h3><span class="emoji">✨</span>Vores grundregler for samarbejde</h3>
     <p>Hos os er samarbejde baseret på tre centrale principper:</p>
@@ -310,15 +315,9 @@
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Børnehave</h6>
-            <p>
-              <a class="text-black">Ny i børnehaven</a>
-            </p>
-            <p>
-              <a class="text-black">Praktiske oplysninger</a>
-            </p>
-            <p>
-              <a class="text-black">Selvbetjening i børnehaven</a>
-            </p>
+            <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+            <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
           </div>
           <!-- Grid column -->
 
@@ -329,15 +328,9 @@
             <h6 class="text-uppercase mb-4 font-weight-bold">
               Fritidshjem
             </h6>
-            <p>
-              <a class="text-black">Ny i fritidshjemmet</a>
-            </p>
-            <p>
-              <a class="text-black">Praktiske oplysninger</a>
-            </p>
-            <p>
-              <a class="text-black">Selvbetjening i fritidshjemmet</a>
-            </p>
+            <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+            <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
           </div>
 
           <!-- Grid column -->
@@ -346,21 +339,10 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Information</h6>
-            <p>
-              <a class="text-black">Kontakt</a>
-            </p>
-            <p>
-              <a class="text-black">Besøg og åbningstider</a>
-            </p>
-            <p>
-              <a class="text-black">Bestyrelse</a>
-            </p>
-            <p>
-              <a class="text-black">Studerende</a>
-            </p>
-            <p>
-              <a class="text-black">Sygdom/fravær</a>
-            </p>
+              <p><a href="info-kontakt.html">Kontakt</a></p>
+              <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+              <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+              <p><a href="info-studerende.html">Studerende</a></p>
           </div>
           <!-- Grid column -->
         </div>
