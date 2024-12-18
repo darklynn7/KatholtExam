@@ -151,38 +151,206 @@ body {
 }
 
 header {
-  position: relative; /* Ensures the overlay is positioned relative to the header */
-  background-image: url('images/fritidshjem-banner-rød.svg'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the header */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents image tiling */
-  min-height: 500px; /* Sets the height of the header */
-  text-align: center; /* Centers the text */
-  color: white; /* Ensures text is visible */
-  display: flex; /* Centers content vertically and horizontally */
+  position: relative; 
+  background-image: url('images/fritidshjem-banner-rød.svg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: 500px; 
+  text-align: center; 
+  color: white; 
+  display: flex; 
   align-items: center;
   justify-content: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds subtle shadow for better readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  padding: 20px; /* Adds padding for smaller screens */
 }
 
 header h1 {
-  font-weight: 300; /* Light font-weight */
+  font-weight: 300; 
   font-family: 'Dekko', sans-serif;
-  font-size: 29px;
+  font-size: 40px;
+  margin-bottom: 20px; /* Spacing below heading */
 }
 
-header p {
-  color: white; /* Muted text */
-  font-family: 'PT Serif', serif;
+.doodle-button {
+  text-decoration: none;
+  font-size: 20px; /* Slightly smaller base font for responsiveness */
+  color: #333;
+  padding: 10px 20px;
+  margin: 10px; /* Adds spacing between buttons */
+  background-color: #FFDD57;
+  border-radius: 5px;
+  border-color: black;
+  box-shadow: 4px 4px 0 black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+  font-family: 'Dekko', sans-serif;
+}
+
+/* Button Hover Effect */
+.doodle-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 black; 
+  background-color: #FFD700;
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  header {
+    min-height: 300px; /* Reduce height for smaller screens */
+  }
+  
+  header h1 {
+    font-size: 28px; /* Smaller heading font size */
+  }
+
+  .doodle-button {
+    font-size: 18px; /* Reduce button font size */
+    padding: 8px 15px; /* Smaller padding */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    min-height: 250px;
+    padding: 10px; /* Add tighter padding */
+  }
+
+  header h1 {
+    font-size: 24px;
+    line-height: 1.2; /* Improve readability on small screens */
+  }
+
+  .doodle-button {
+    display: block; /* Stack buttons vertically */
+    width: 80%; /* Buttons take 80% width */
+    margin: 10px auto; /* Center buttons */
+    text-align: center;
+  }
+}
+
+/* Default styles (desktop and larger screens) */
+.text-section {
+  padding: 20px;
+  background-color: white;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.info-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styles */
+.text-section h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Dekko', sans-serif;
+  font-size: 22px; 
+  font-weight: bold;
+}
+
+.text-section p {
   font-size: 16px;
+  color: #555;
+  font-family: 'PT Serif', serif;
 }
-.btn-primary {
-  background-color: #007bff; /* Bootstrap primary blue */
-  border: none;
+
+.text-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  color: black;
+  font-family: 'PT Serif', serif;
 }
-.btn-primary:hover {
-  background-color: #0056b3; /* Darker blue for hover */
+
+.text-section ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
 }
+
+.text-section ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content-box {
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .text-section {
+    padding: 15px;
+  }
+
+  .text-section h3 {
+    font-size: 20px; /* Reduce font size for headings */
+  }
+
+  .text-section p,
+  .text-section ul li {
+    font-size: 14px; /* Reduce font size for body text */
+  }
+
+  .info-container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-section {
+    padding: 10px;
+  }
+
+  .text-section h3 {
+    font-size: 18px; /* Further reduce font size for very small screens */
+  }
+
+  .text-section p,
+  .text-section ul li {
+    font-size: 13px;
+  }
+
+  .info-container {
+    padding: 8px;
+    margin: 10px auto;
+  }
+}
+
 .footer {
 background-color: white;
 }
@@ -201,5 +369,33 @@ footer a {
   color: black; /* Muted text */
   font-family: 'PT Serif', serif;
   font: 16px;
+}
+
+.hand-drawn-line-blue {
+  background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-green {
+  background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-yellow {
+  background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+.hand-drawn-line-red {
+  background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
+  height: 10px;                /* Adjust height based on line style */
+  background-repeat: repeat-x; /* Repeat the pattern horizontally */
+}
+#blyanter {
+  height: 70px; /* Matches the font size */
+  width: auto; /* Maintains aspect ratio */
+  align-content: center; /* Aligns image with the text baseline */
+  display: block; /* Makes the image behave like a block element */
+  margin: 0 auto; /* Horizontally centers the image */
 }
 

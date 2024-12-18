@@ -210,55 +210,89 @@ header p {
       font-family: 'PT Serif', serif;
       font: 16px;
     }
+
     .enrollment-fees {
       padding: 20px;
       background-color: white;
       max-width: 800px;
       margin: auto;
+      box-sizing: border-box; /* Ensure padding doesn't add to the width */
     }
     
     .enrollment-fees h4 {
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: black;
       font-family: 'Dekko', sans-serif;
-      font-size: 22px;
+      font-size: 1.5rem; /* Use relative units */
     }
     
-    .enrollment-fees p {
-      margin-bottom: 20px;
+    .enrollment-fees p, 
+    .enrollment-fees ul, 
+    .enrollment-fees li, 
+    .enrollment-fees a {
       color: #555;
       font-family: 'PT Serif', serif;
-      font-size: 16px;
+      font-size: 1rem; /* Relative text size */
+      line-height: 1.5; /* Improve readability */
     }
     
     .enrollment-fees ul {
-      margin-bottom: 20px;
-      color: #555;
-      font-family: 'PT Serif', serif;
-      font-size: 16px;
+      padding-left: 20px; /* Ensure bullet points align nicely */
+    }
+    
+    .enrollment-fees li {
+      margin-bottom: 10px;
     }
     
     .enrollment-fees a {
       color: #007BFF;
       text-decoration: none;
-      margin-bottom: 20px;
-      font-family: 'PT Serif', serif;
-      font-size: 16px;
     }
     
     .enrollment-fees a:hover {
       text-decoration: underline;
-      margin-bottom: 20px;
-      font-family: 'PT Serif', serif;
-      font-size: 16px;
     }
     
-    .enrollment-fees li {
-      margin-bottom: 20px;
-      color: #555;
-      font-family: 'PT Serif', serif;
-      font-size: 16px;
+    .enrollment-fees img {
+      max-width: 100%; /* Make the image responsive */
+      height: auto;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .enrollment-fees {
+        padding: 15px;
+      }
+    
+      .enrollment-fees h4 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+    
+      .enrollment-fees p, 
+      .enrollment-fees li, 
+      .enrollment-fees a {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .enrollment-fees {
+        padding: 10px;
+      }
+    
+      .enrollment-fees h4 {
+        font-size: 1.1rem;
+      }
+    
+      .enrollment-fees p, 
+      .enrollment-fees li, 
+      .enrollment-fees a {
+        font-size: 0.85rem;
+      }
     }
     
     .hand-drawn-line-blue {

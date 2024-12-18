@@ -218,9 +218,9 @@ body {
     }
     
     .site-section .heading {
-      font-size: 29px;
+      font-size: 28px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 29px;
     }
     
     .site-section p {
@@ -229,6 +229,47 @@ body {
       font-family: 'PT Serif', serif;
       font-size: 16px;
     }
+    
+    .img-fluid {
+      max-width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px;
+    }
+    
+@media (max-width: 480px) {
+  .site-section {
+    padding: 30px 15px; /* Reduce padding */
+  }
+
+  .row {
+    display: block; /* Stack items vertically */
+  }
+
+  .col-md-6,
+  .col-md-5 {
+    width: 100%; /* Full width for columns */
+    margin: 0;
+    padding: 0;
+  }
+
+  .ml-auto,
+  .pl-md-5 {
+    margin-left: 0;
+    padding-left: 0; /* Remove extra spacing */
+  }
+
+  .site-section p {
+    font-size: 14px; /* Smaller text for readability */
+    line-height: 1.6; /* Increase line spacing */
+  }
+
+  #blyanter {
+    display: block;
+    margin: 0 auto 20px; /* Center align and add spacing below */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
     
     .img-fluid {
       max-width: 100%;
@@ -283,10 +324,28 @@ body {
       transform: translateY(-10px);
     }
     
-    .icon {
+    .icon-value {
+      display: inline-block; /* Ensures proper rendering */
+      visibility: visible !important; /* Force visibility */
+      font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
       font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #0078ff;
+      color: inherit; /* Ensure it takes the correct text color */
+      line-height: 1; /* Prevent unnecessary spacing */
+    }
+    .value-title {
+      font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 20px;
+    }
+    
+    .value-description {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 16px;
+      text-align: left;
     }
     
     .value-title {
@@ -304,24 +363,96 @@ body {
       font-size: 16px;
       text-align: left;
     }
-    .day-section {
-      padding: 50px 0;
-      background-color: white;
-    }
-    .day-section p {
-      margin-bottom: 20px;
-      color: #555;
-      font-family: 'PT Serif', serif;
-      font-size: 16px;
-      }
-    
-      .day-section h6 {
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: black;
-        font-family: 'Dekko', sans-serif;
-        font-size: 22px;
-      }
+.values-section {
+  padding: 50px 0;
+  background-color: white;
+}
+.values-section p {
+margin-bottom: 20px;
+color: #555;
+font-family: 'PT Serif', serif;
+font-size: 16px;
+}
+.values-section h6 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 22px;
+}
+
+@media (max-width: 480px) { /* Target small phone screens */
+  .values-list {
+    display: block; /* Stack items vertically */
+    width: 100%; /* Container takes full width */
+    padding: 10px; /* Add padding around container */
+  }
+
+  .value-item {
+    display: block; /* Ensure items stack */
+    width: 90%; /* Use 90% of the screen width */
+    max-width: 400px; /* Set a maximum width to prevent stretching */
+    margin: 20px auto; /* Center items and add vertical spacing */
+    padding: 20px; /* Internal padding for content */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .value-title {
+    font-size: 22px; /* Larger titles for readability */
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below the title */
+    text-align: center;
+  }
+
+  .value-description {
+    font-size: 18px; /* Larger description font size */
+    line-height: 1.6; /* Improved line spacing */
+    text-align: center; /* Center-align descriptions */
+  }
+
+  .icon-value {
+    font-size: 2.5rem; /* Ensure visibility on smaller screens */
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+    visibility: visible !important;
+  }
+}
+.day-section {
+  padding: 30px 15px;
+  background-color: white;
+}
+
+.day-section h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 18px;
+}
+
+.day-section p {
+  margin-bottom: 15px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .day-section {
+    padding: 20px 10px;
+  }
+
+  .day-section h6 {
+    font-size: 22px;
+  }
+
+  .day-section p {
+    font-size: 13px;
+  }
+
+}
 .box-container {
   display: flex;
   gap: 10px; /* Spacing between items */
@@ -412,43 +543,66 @@ font-size: 16px;
   padding: 40px;
   background-color: white;
 }
+
 .activities-container {
   display: flex;
   justify-content: space-between; /* Center items within the container */
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   gap: 100px; /* Space between boxes */
 }
+
 .activity-item {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
-  flex: 1 1 calc(50% - 5px); /* 2 boxes per row with 100px gap */
+  flex: 1 1 calc(50% - 10px); /* 2 boxes per row with 100px gap */
   width: auto; /* Fixed width for smaller boxes */
   height: auto; /* Fixed height for consistency */
   box-sizing: border-box;
 }
+
 .activity-item img {
   width: 500px;
   height: 400px; /* Adjust image height */
   object-fit: cover;
   border-radius: 8px;
 }
+
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .activity-item {
     flex: 1 1 100%; /* 1 item per row on small screens */
     height: auto; /* Adjust height to fit content */
   }
 }
-.day-section h3 {
+
+.activity-item h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
   font-family: 'Dekko', sans-serif;
-  font-weight: bold; /* Makes the text bold */
   font-size: 22px;
+  text-align: center;
 }
-.day-section p {
+
+.activity-item p {
+  text-align: center;
   margin-bottom: 20px;
   color: #555;
   font-family: 'PT Serif', serif;
   font-size: 16px;
-  }
+}
+/* Generel stil til containeren af galleriet */
+.section.bg-default {
+padding: 30px 0;
+background-color: white; /* Baggrundsfarve */
+}
+/* Layout og stil for hver kolonne i galleriet */
+.col-lg-4.col-sm-6 {
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+

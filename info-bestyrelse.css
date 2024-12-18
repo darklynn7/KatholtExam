@@ -240,42 +240,91 @@ header p {
     margin: 0 auto; /* Horizontally centers the image */
   }
   
-  .text-section {
-    padding: 20px;
-    background-color: white;
-    color: #333;
-    max-width: 800px;
-    margin: auto;
-  
-  }
-  
-  .text-section p {
-    margin-bottom: 20px;
+/* General Styles */
+.text-section {
+  padding: 20px;
+  background-color: white;
+  max-width: 800px;
+  margin: auto;
+}
+
+.text-section h3 {
+  font-size: 22px; /* Adjusted for better scaling */
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'Dekko', sans-serif;
+}
+
+.text-section p,
+.text-section ul,
+.text-section li {
+  margin-bottom: 15px;
   color: #555;
   font-family: 'PT Serif', serif;
   font-size: 16px;
-  }
-  .text-section strong {
-    margin-bottom: 20px;
+}
+
+.text-section strong {
+  margin-bottom: 15px;
   color: black;
   font-family: 'PT Serif', serif;
   font-size: 16px;
+}
+
+/* Remove extra padding */
+.text-section ul {
+  padding-left: 20px;
+}
+
+.text-section li {
+  padding-left: 10px;
+}
+
+/* Responsive Images */
+.text-section img {
+  max-width: 100%; /* Image scales down with screen size */
+  height: auto;
+  display: block; /* Center the image */
+  margin: 0 auto 15px;
+}
+
+/* Add Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .text-section {
+    padding: 15px;
   }
-  
-  .text-section ul {
-    margin-bottom: 20px;
-  color: #555;
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
-      padding-left: 20px;
-  
+
+  .text-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
-  
-  .text-section li {
-    margin-bottom: 20px;
-  color: #555;
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
-      padding-left: 20px;
-  
+
+  .text-section p,
+  .text-section ul,
+  .text-section li,
+  .text-section b {
+    font-size: 14px;
+    margin-bottom: 10px;
   }
+}
+
+@media (max-width: 480px) {
+  .text-section {
+    padding: 10px;
+  }
+
+  .text-section h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .text-section p,
+  .text-section ul,
+  .text-section li,
+  .text-section strong {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+}
+
+

@@ -259,6 +259,47 @@ color: black;
 font-family: 'PT Serif', serif;
 font-size: 16px;
     }
+
+/* For Tablets and Larger Screens */
+@media (min-width: 768px) {
+  .info-section {
+    padding: 20px 40px; /* Slightly more padding on larger screens */
+    max-width: 900px; /* Increase max-width */
+  }
+
+  .info-section h3 {
+    font-size: 24px; /* Larger font for headings */
+  }
+
+  .info-section p,
+  .info-section li {
+    font-size: 17px; /* Slightly larger text */
+    line-height: 1.8;
+  }
+}
+
+/* For Very Small Screens (Phones) */
+@media (max-width: 480px) {
+  .info-section {
+    padding: 10px; /* Minimal padding */
+  }
+
+  .info-section h3 {
+    font-size: 16px; /* Further reduce heading size */
+  }
+
+  .info-section p,
+  .info-section li {
+    font-size: 13px;
+  }
+
+  .info-section img {
+    max-width: 90%; /* Allow image to use most of the screen width */
+    margin-bottom: 10px; /* Reduce spacing */
+  }
+}
+
+
     .emoji {
       font-size: 18; /* Ændr størrelsen på emojis */
       margin-right: 8px; /* Giver mellemrum mellem emoji og tekst */

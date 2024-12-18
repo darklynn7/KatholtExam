@@ -123,7 +123,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   /* Hide the navigation links */
   .topnav {
     display: none;
@@ -210,7 +210,7 @@ header p {
       font-family: 'PT Serif', serif;
       font: 16px;
     }
-    
+
     .site-section {
       padding: 50px 0;
       background-color: white;
@@ -231,9 +231,46 @@ header p {
     
     .img-fluid {
       max-width: 100%;
-      height: 250 !important;
+      height: auto; /* Maintain aspect ratio */
       border-radius: 8px;
     }
+    
+@media (max-width: 480px) {
+  .site-section {
+    padding: 30px 15px; /* Reduce padding */
+  }
+
+  .row {
+    display: block; /* Stack items vertically */
+  }
+
+  .col-md-6,
+  .col-md-5 {
+    width: 100%; /* Full width for columns */
+    margin: 0;
+    padding: 0;
+  }
+
+  .ml-auto,
+  .pl-md-5 {
+    margin-left: 0;
+    padding-left: 0; /* Remove extra spacing */
+  }
+
+  .site-section p {
+    font-size: 14px; /* Smaller text for readability */
+    line-height: 1.6; /* Increase line spacing */
+  }
+
+  #blyanter {
+    display: block;
+    margin: 0 auto 20px; /* Center align and add spacing below */
+    max-width: 90%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+ 
+    
     
     .container-values {
       margin: 0 auto;
@@ -283,10 +320,28 @@ header p {
       transform: translateY(-10px);
     }
     
-    .icon {
+    .icon-value {
+      display: inline-block; /* Ensures proper rendering */
+      visibility: visible !important; /* Force visibility */
+      font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
       font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #0078ff;
+      color: inherit; /* Ensure it takes the correct text color */
+      line-height: 1; /* Prevent unnecessary spacing */
+    }
+    .value-title {
+      font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 20px;
+    }
+    
+    .value-description {
+      margin-bottom: 20px;
+      color: #555;
+      font-family: 'PT Serif', serif;
+      font-size: 16px;
+      text-align: left;
     }
     
     .value-title {
@@ -321,31 +376,81 @@ font-size: 16px;
   font-family: 'Dekko', sans-serif;
   font-size: 22px;
 }
+
+@media (max-width: 480px) { /* Target small phone screens */
+  .values-list {
+    display: block; /* Stack items vertically */
+    width: 100%; /* Container takes full width */
+    padding: 10px; /* Add padding around container */
+  }
+
+  .value-item {
+    display: block; /* Ensure items stack */
+    width: 90%; /* Use 90% of the screen width */
+    max-width: 400px; /* Set a maximum width to prevent stretching */
+    margin: 20px auto; /* Center items and add vertical spacing */
+    padding: 20px; /* Internal padding for content */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .value-title {
+    font-size: 22px; /* Larger titles for readability */
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below the title */
+    text-align: center;
+  }
+
+  .value-description {
+    font-size: 18px; /* Larger description font size */
+    line-height: 1.6; /* Improved line spacing */
+    text-align: center; /* Center-align descriptions */
+  }
+
+  .icon-value {
+    font-size: 2.5rem; /* Ensure visibility on smaller screens */
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+    visibility: visible !important;
+  }
+}
+
 .day-section {
-  padding: 50px 0;
+  padding: 30px 15px;
   background-color: white;
 }
-.day-section .list-unstyled li {
-  margin-bottom: 10px;
-  font-size: 16px;
+
+.day-section h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 18px;
 }
-.day-section .icon-check {
-  color: #32cd32; /* Green check icon color */
-  margin-right: 10px;
-}
+
 .day-section p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .day-section {
+    padding: 20px 10px;
   }
+
   .day-section h6 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: black;
-    font-family: 'Dekko', sans-serif;
     font-size: 22px;
   }
+
+  .day-section p {
+    font-size: 13px;
+  }
+
+}
+
   .activities-section {
     padding: 40px;
     background-color: white;
@@ -377,7 +482,7 @@ font-size: 16px;
   }
   
   /* Responsive adjustments */
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     .activity-item {
       flex: 1 1 100%; /* 1 item per row on small screens */
       height: auto; /* Adjust height to fit content */
@@ -496,6 +601,15 @@ font-size: 16px;
   font-size: 22px;
   font-family: 'Dekko', sans-serif;
 }
+
+.food-section h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Dekko', sans-serif;
+  font-size: 22px;
+}
+
 .menu-intro {
   margin-bottom: 20px;
   color: #555;
@@ -553,6 +667,14 @@ color: #555;
 font-family: 'PT Serif', serif;
 font-size: 16px;
 }
+
+.food-section b {
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+  }
+
 .food-section h3 {
   font-size: 22px;
   font-weight: bold;
@@ -560,6 +682,75 @@ font-size: 16px;
   font-family: 'Dekko', sans-serif;
   text-align: center;
   }
+
+/* Responsive Design for Phone Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .menu-container {
+    width: 100%; /* Full-width for small screens */
+    padding: 10px; /* Slightly larger padding for breathing space */
+  }
+
+  .menu-grid {
+    display: block; /* Stack columns vertically */
+  }
+
+  .menu-left, .menu-right {
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+
+  .circle-image img {
+    width: 180px; /* Larger image size */
+    height: 180px;
+  }
+
+  .item-title, h3 {
+    font-size: 22px; /* Larger font for headings */
+    margin-bottom: 10px;
+  }
+
+  .menu-container p, 
+  .aligned-list li, 
+  .item-description, 
+  .aligned-list-numberless li {
+    font-size: 15px; /* Bigger font size for body text */
+    line-height: 1.5; /* Improve readability with more line spacing */
+  }
+
+  .aligned-list li::before {
+    font-size: 18px; /* Bigger list counter */
+  }
+
+  .menu-item {
+    margin-bottom: 15px; /* Maintain good spacing */
+  }
+
+  .circle-image {
+    margin: 15px auto; /* Center image with enough margin */
+  }
+
+  /* Ensure list alignment */
+  .aligned-list, 
+  .aligned-list-numberless {
+    padding-left: 10px;
+    margin-left: 0;
+  }
+
+  .food-section h3 {
+    font-weight: bold;
+    margin-bottom: 15px; /* Adjusted margin */
+    color: black;
+    font-family: 'Dekko', sans-serif;
+    font-size: 20px; /* New size for smaller screens */
+  }
+
+  .food-section b {
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'PT Serif', serif;
+    font-size: 15px;
+    }
+}
+
 .hand-drawn-line-blue {
   background-image: url('./images/dotted-line-blå.svg'); /* Path to your SVG */
   height: 10px;                /* Adjust height based on line style */
