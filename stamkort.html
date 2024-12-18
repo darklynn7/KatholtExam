@@ -61,10 +61,31 @@
   </nav>
 
   <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      x.classList.toggle("responsive");
-    }
+function myFunction() {
+  const topnav = document.getElementById("myTopnav");
+  topnav.classList.toggle("responsive");
+}
+
+// Dropdown Functionality for Small Screens
+const dropdownButtons = document.querySelectorAll(".dropdown-button");
+dropdownButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    const dropdownContent = button.nextElementSibling;
+
+    // Toggle visibility
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block";
+
+    // Close other dropdowns
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+      if (content !== dropdownContent) {
+        content.style.display = "none";
+      }
+    });
+  });
+});
   </script>
  
  <!-- Header Section -->
@@ -78,7 +99,7 @@
   </header>
 
   <section class="info-section">
-    <img src="images/blyant-log-in-gul.svg" alt="log ind blyant" id="blyanter">
+    <img src="images/blyant (log ind) rød.svg" alt="log ind blyant" id="blyanter">
 </section>
 <section class="info-section">
 <p>Se kontaktinfo på de andre børn og deres forældre.</p>
@@ -108,7 +129,7 @@
         <section class="text-section">
           <p>Velkommen til Børnegården Katholt. Når jeres barn starter her, skal I udføre følgende trin:</p>
 <br>
-            <img src="images/blyant-sådan.svg" alt="sådan gør du blyant" id="blyanter">
+            <img src="images/blyant(sådan gør du ) blå.svg" alt="sådan gør du blyant" id="blyanter">
             <br>
             <ol class="aligned-list">
                 <li>
@@ -154,7 +175,7 @@
         <div class="hand-drawn-line-green"></div>
         <br><br>
         <section class="text-section">
-            <img src="images/blyant-funktioner-blå.svg" alt="funktioner i Alia blyant" id="blyanter">
+            <img src="images/Blyant(funktioner i alia) grøn.svg" alt="funktioner i Alia blyant" id="blyanter">
             <br>
               <h3><span class="emoji">✅</span>Nem registrering</h3>
 <p>Meld sygdom, ansøg om frihed eller planlæg din ferie direkte i systemet. Det er hurtigt, enkelt og altid tilgængeligt.</p>
@@ -172,7 +193,7 @@
         <div class="hand-drawn-line-yellow"></div>
         <br><br>
         <section class="text-section">
-            <img src="images/blyant-har-du-grøn.svg" alt="har du problemer blyant" id="blyanter">
+            <img src="images/Blyant (har du problemer) gul.svg" alt="har du problemer blyant" id="blyanter">
             <br>
             <p>Du er meget velkommen til at tage fat i personalet, hvis du på nogen som helst måde skulle komme til at opleve:</p>
               <li>Udfordringer.</li>
@@ -182,44 +203,6 @@
         <br><br>
 <div class="hand-drawn-line-red"></div>
 <br><br>
-       
-  <script>
-    function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
- 
-// JavaScript to handle dropdown functionality
-  document.querySelectorAll('.dropbtn').forEach(button => {
-    button.addEventListener('click', function (event) {
-      event.stopPropagation();
- 
-      // Get the associated dropdown content
-      const dropdownContent = this.nextElementSibling;
- 
-      // Close all other dropdowns
-      document.querySelectorAll('.dropdown-content').forEach(content => {
-        if (content !== dropdownContent) {
-          content.classList.remove('show');
-        }
-      });
- 
-      // Toggle the clicked dropdown
-      dropdownContent.classList.toggle('show');
-    });
-  });
- 
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function () {
-    document.querySelectorAll('.dropdown-content').forEach(content => {
-      content.classList.remove('show');
-    });
-  });
-  </script>
 </body>
 <footer>
   <!-- Remove the container if you want to extend the Footer to full width. -->

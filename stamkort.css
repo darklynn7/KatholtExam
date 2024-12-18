@@ -122,43 +122,85 @@ body {
   cursor: pointer;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  /* Hide the navigation links */
+/* Responsive Design for Screens Smaller than 480px */
+@media screen and (max-width: 480px) {
   .topnav {
-    display: none;
     flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 60px;
+    align-items: flex-start;
+    display: none; /* Hidden by default */
+    background-color: #f1f1f1; /* Optional: Background for dropdown menu */
+    width: 100%; /* Full width */
+    position: absolute; /* Overlay behavior */
+    top: 100px; /* Adjust based on navbar height */
     left: 0;
-    width: 100%;
+    z-index: 1000; /* Ensure it appears above other elements */
+    border-top: 1px solid #ddd; /* Optional: Border for clarity */
   }
 
   .topnav.responsive {
-    display: flex; /* Show links when toggled */
+    display: flex; /* Show menu when responsive class is added */
   }
 
-  /* Show Hamburger Menu */
+  .topnav a,
+  .dropdown-button {
+    display: block; /* Stack as blocks */
+    color: #444; /* Slightly darker text color */
+    background-color: #f1f1f1; /* Optional: Slightly darker background */
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    width: 100%; /* Ensure full width for touch-friendly links */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding and borders fit */
+    border: none; /* Remove default borders */
+  }
+
+  .topnav a + .dropdown-button,
+  .dropdown-button + a {
+    border-top: 1px solid #aaa; /* Dark grey line between sections */
+  }
+
+  .topnav > a,
+  .topnav > .dropdown {
+    display: block; /* Stack items vertically */
+    color: #444; /* Text color */
+    background-color: #f1f1f1; /* Background color */
+    padding: 10px 20px; /* Padding for touch-friendly areas */
+    width: 100%; /* Full width */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding and borders fit */
+    border-bottom: 1px solid #aaa; /* Small grey line between items */
+  }
+
   .icon {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    display: block; /* Show hamburger icon */
   }
 
-  /* Adjust dropdown for small screens */
   .dropdown-content {
-    position: static; /* Prevent overlap */
-    box-shadow: none;
+    display: none; /* Ensure dropdowns are hidden initially */
+    background-color: #f1f1f1; /* Match background */
+  }
+
+  .dropdown-content a {
+    color: #444; /* Match text color */
+    background-color: #f1f1f1; /* Match background */
+    padding: 10px 20px; /* Same padding as main links */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    border: none;
+  }
+
+    .dropdown-content a + a {
+    border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
+  }
+
+  .dropdown-button:focus + .dropdown-content,
+  .dropdown-button.active + .dropdown-content {
+    display: block; /* Show dropdown on button press */
   }
 }
 
-
-
 header {
   position: relative; /* Ensures the overlay is positioned relative to the header */
-  background-image: url('images/fritidshjem-banner-rød.svg'); /* Replace with your image path */
+  background-image: url('images/forside-banner-rigtig.svg'); /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the header */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image tiling */

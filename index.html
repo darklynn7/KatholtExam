@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <title>Børnegården Katholt | Velkommen til Børnegården Katholt</title>
 </head>
-<body>
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -74,11 +73,34 @@
     </nav>
   
     <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        x.classList.toggle("responsive");
+function myFunction() {
+  const topnav = document.getElementById("myTopnav");
+  topnav.classList.toggle("responsive");
+}
+
+// Dropdown Functionality for Small Screens
+const dropdownButtons = document.querySelectorAll(".dropdown-button");
+dropdownButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    const dropdownContent = button.nextElementSibling;
+
+    // Toggle visibility
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block";
+
+    // Close other dropdowns
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+      if (content !== dropdownContent) {
+        content.style.display = "none";
       }
-    </script>
+    });
+  });
+});
+
+
+</script>
    <!-- Header Section -->
  <header class="py-5 bg-light mb-4">
   <div class="container">
@@ -91,7 +113,7 @@
   </button>
     </div>
   </div>
-  </header>
+</header>
   <br>
   <br>
 
@@ -132,7 +154,6 @@
     </div>
   </div>
 </section>
-
 <br><br>
 <div class="hand-drawn-line-green"></div>
 <br><br>
