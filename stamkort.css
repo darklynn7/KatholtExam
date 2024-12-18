@@ -276,6 +276,12 @@ header p {
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
  }
+ .info-login-section p {
+  margin-bottom: 10px;
+  color: #555;
+  font-family: 'PT Serif', serif;
+  text-align: center;
+  }
 
   .info-section h3 {
     font-size: 28px;
