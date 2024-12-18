@@ -291,24 +291,22 @@ form input[type="password"] {
 /* Submit Button Styling */
 form input[type="submit"] {
   width: 100%;
-  padding: 10px;
-  background-color: #ffdd57; /* Bright playful yellow */
-  color: black; 
-  font-size: 22px;
+  background-color: #ffc825;
+  color: #000; /* Text color */
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #000; /* Small black border */
   border-radius: 5px;
-  border-color: black;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   font-family: 'Dekko', sans-serif;
-    font-weight: bold;
+  font-size: 22px;
 }
 
 /* Hover Effect for Button */
 form input[type="submit"]:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 8px 8px 0 black; /* Larger shadow */
-  background-color: #FFD700;
-  font-weight: bold;
+  background-color: #e6b020;
+  border-color: #444; /* Slightly darker border on hover */
 }
 
 /* Links Styling */

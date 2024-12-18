@@ -451,44 +451,67 @@ font-size: 16px;
 
 }
 
-  .activities-section {
-    padding: 40px;
-    background-color: white;
-  }
-  
+.activities-section {
+  padding: 40px;
+  background-color: white;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (if needed) */
+}
+
+.activities-container {
+  display: flex;
+  justify-content: space-between; /* Space items evenly within the container */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 100px; /* Space between items */
+  max-width: calc(500px * 2 + 20px); /* Width for two items and the gap */
+  width: 100%; /* Adjusts to fit the parent container */
+}
+
+.activity-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  flex: 0 0 500px; /* Fixed width for each item */
+  box-sizing: border-box;
+}
+
+.activity-item img {
+  width: 100%; /* Make images responsive */
+  height: 500px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments for phones */
+@media (max-width: 480px) {
   .activities-container {
-    display: flex;
-    justify-content: space-between; /* Center items within the container */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 100px; /* Space between boxes */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Reduce gap between items for small screens */
   }
-  
+
   .activity-item {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    flex: 1 1 calc(50% - 10px); /* 2 boxes per row with 100px gap */
-    width: auto; /* Fixed width for smaller boxes */
-    height: auto; /* Fixed height for consistency */
-    box-sizing: border-box;
+    flex: 1 1 100%; /* Full width */
+    width: 100%; /* Ensure the item spans the full container width */
+    height: auto; /* Allow height to adjust dynamically */
   }
-  
+
   .activity-item img {
-    width: 500px;
-    height: 400px; /* Adjust image height */
-    object-fit: cover;
-    border-radius: 8px;
+    width: 100%; /* Make images adapt to container */
+    height: auto; /* Maintain aspect ratio */
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 480px) {
-    .activity-item {
-      flex: 1 1 100%; /* 1 item per row on small screens */
-      height: auto; /* Adjust height to fit content */
-    }
+
+  .activity-item h3 {
+    font-size: 18px; /* Adjust font size for smaller screens */
   }
+
+  .activity-item p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
   
+
   .activity-item h3 {
     font-weight: bold;
     margin-bottom: 20px;
@@ -534,6 +557,14 @@ font-size: 16px;
   font-family: 'Dekko', sans-serif;
   font-size: 22px;
 }
+
+.traditions-section h3 {
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'PT Serif', serif;
+  font-size: 22px;
+}
+
 .service-item {
   position: relative;
   padding-left: 80px;

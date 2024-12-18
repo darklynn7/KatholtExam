@@ -265,6 +265,13 @@ header p {
       display: block; /* Makes link easier to click */
       margin-top: 5px;
     }
+
+    #blyanter {
+      display: block;
+      margin: 0 auto 20px; /* Center align and add spacing below */
+      max-width: 90%;
+      height: auto; /* Maintain aspect ratio */
+    }
   }
   
 
