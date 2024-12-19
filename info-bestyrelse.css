@@ -222,7 +222,7 @@ header p {
     font: 16px;
   }
  
-  footer h6 {
+  footer h2 {
     font-family: 'Dekko', sans-serif;
     font-size: 22px; /* Adjust the size as needed */
     font-weight: bold;
@@ -251,7 +251,7 @@ header p {
     background-repeat: repeat-x; /* Repeat the pattern horizontally */
   }
   
-  #blyanter {
+  .blyanter {
     height: 70px; /* Matches the font size */
     width: auto; /* Maintains aspect ratio */
     align-content: center; /* Aligns image with the text baseline */

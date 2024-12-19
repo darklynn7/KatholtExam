@@ -221,7 +221,7 @@ header p {
     font: 16px;
   }
  
-  footer h6 {
+  footer h3 {
     font-family: 'Dekko', sans-serif;
     font-size: 22px; /* Adjust the size as needed */
     font-weight: bold;
@@ -241,7 +241,7 @@ header p {
     border-radius: 8px;
   }
   
-  .text-section h3 {
+  .text-section h2 {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -278,7 +278,7 @@ header p {
       border-radius: 5px;
     }
   
-    .text-section h3 {
+    .text-section h2 {
       font-size: 20px;
       margin-bottom: 10px;
     }
@@ -297,7 +297,7 @@ header p {
       margin-top: 5px;
     }
 
-    #blyanter {
+    .blyanter {
       display: block;
       margin: 0 auto 20px; /* Center align and add spacing below */
       max-width: 90%;
@@ -311,7 +311,7 @@ header p {
     height: 10px;                /* Adjust height based on line style */
     background-repeat: repeat-x; /* Repeat the pattern horizontally */
   }
-  #blyanter {
+  .blyanter {
     height: 70px; /* Matches the font size */
     width: auto; /* Maintains aspect ratio */
     align-content: center; /* Aligns image with the text baseline */

@@ -283,7 +283,7 @@ header h1 {
 }
 
 /* Text styles */
-.text-section h3 {
+.text-section h2 {
   margin-bottom: 10px;
   text-align: center;
   font-family: 'Dekko', sans-serif;
@@ -324,7 +324,7 @@ header h1 {
     padding: 10px;
   }
 
-  .text-section h3 {
+  .text-section h2 {
     font-size: 18px; /* Further reduce font size for very small screens */
   }
 
@@ -338,7 +338,7 @@ header h1 {
     margin: 10px auto;
   }
 
-  #blyanter {
+  .blyanter {
     display: block;
     margin: 0 auto 20px; /* Center align and add spacing below */
     max-width: 90%;
@@ -346,7 +346,7 @@ header h1 {
   }
 }
 
-footer h6 {
+footer h3 {
   font-family: 'Dekko', sans-serif;
   font-size: 22px; /* Adjust the size as needed */
   font-weight: bold;
@@ -374,7 +374,7 @@ footer a {
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
 
-#blyanter {
+.blyanter {
   height: 70px; /* Matches the font size */
   width: auto; /* Maintains aspect ratio */
   align-content: center; /* Aligns image with the text baseline */

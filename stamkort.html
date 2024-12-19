@@ -15,7 +15,7 @@
   <nav class="navbar">
     <!-- Left: Logo -->
     <div class="navbar-logo">
-      <a href="index.html"><img src="images/logo katholdt størrelse.svg" alt="Logo"></a>
+      <a href="index.html"><img src="images/logo-katholt-størrelse.svg" alt="Logo"></a>
     </div>
 
     <!-- Navigation Links -->
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <a href="stamkort.html" class="active" id="card">Stamkort/børneintranet</a>
+      <a href="stamkort.html" id="card">Stamkort/børneintranet</a>
 
       <div class="dropdown">
         <button class="dropdown-button">Information <i class="fa fa-caret-down"></i></button>
@@ -97,18 +97,18 @@ dropdownButtons.forEach((button) => {
   </div>
   </header>
 
-  <section class="info-section">
-    <img src="images/blyant (log ind) rød.svg" alt="log ind blyant" id="blyanter">
-</section>
-<section class="info-login-section">
+  <div class="info-section">
+    <img src="images/blyant-log-ind-rød.svg" alt="log ind blyant" class="blyanter">
+  </div>
+<div class="info-login-section">
 <p>Se kontaktinfo på de andre børn og deres forældre.</p>
 <p>Opret dig som bruger herunder (begge forældre).</p>
-</section>
-<section class="info-login-section">
+</div>
+<div class="info-login-section">
 <div class="login-container">
 <form>
-<p>E-mail: <br><input type="text"/></p>
-<p>Adgangskode: <input type="text"/> </p>
+<p>E-mail: <br><input type="text"></p>
+<p>Adgangskode: <input type="text"> </p>
 <p>
     For forældre
     <br>
@@ -119,8 +119,6 @@ dropdownButtons.forEach((button) => {
 </form>
 </div>
 </div>
-</div>
-</section>
 
 <br><br>
 <div class="hand-drawn-line-blue"></div>
@@ -128,25 +126,24 @@ dropdownButtons.forEach((button) => {
         <section class="text-section">
           <p>Velkommen til Børnegården Katholt. Når jeres barn starter her, skal I udføre følgende trin:</p>
 <br>
-            <img src="images/blyant(sådan gør du ) blå.svg" alt="sådan gør du blyant" id="blyanter">
+            <img src="images/blyant-sådan-gør-du-blå.svg" alt="sådan gør du blyant" class="blyanter">
             <br>
             <ol class="aligned-list">
                 <li>
-                  <h3>Tilmeld jer Beskedservice:</h3>
+                  <h2>Tilmeld jer Beskedservice:</h2>
                     <ul class="aligned-list-numberless">
                       <li>Herfra modtager I mails fra Børnegården Katholt.
                   </li>
-                </li>
               </ul>
                 <li>
-                    <h3>Opret jer på Stamkort:</h3>
+                    <h2>Opret jer på Stamkort:</h2>
                     <ul class="aligned-list-numberless">
                         <li>Udfyld oplysninger om jer selv og barnet.</li>
                         <li>Husk at oprette begge forældre med separate e-mails!</li>
                     </ul>
                 </li>
                 <li>
-                    <h3>Upload barnets billede:</h3>
+                    <h2>Upload barnets billede:</h2>
                     <ul class="aligned-list-numberless">
                         <li>Log ind på stamkortet.</li>
                         <li>Klik på den gule giraf og vælg "Skift billede".</li>
@@ -154,7 +151,7 @@ dropdownButtons.forEach((button) => {
                     </ul>
                 </li>
                 <li>
-                    <h3>Rediger tilladelser:</h3>
+                    <h2>Rediger tilladelser:</h2>
                     <ul class="aligned-list-numberless">
                         <li>Log ind på stamkortet.</li>
                         <li>Gå til afsnittet <em>Tilladelser</em>.</li>
@@ -162,7 +159,7 @@ dropdownButtons.forEach((button) => {
                     </ul>
                 </li>
                 <li>
-                    <h3>Download Alia App:</h3>
+                    <h2>Download Alia App:</h2>
                     <ul class="aligned-list-numberless">
                         <li>Find "Alia Børneintranet" i <a href="http://itunes.apple.com/dk/app/alia/id1170197681?mt=8" target="_blank">App Store</a> eller <a href="http://play.google.com/store/apps/details?id=dk.alia.aliaboern&hl=da" target="_blank">Google Play</a>.</li>
                         <li>Installer og log ind med den kode, I har oprettet på hjemmesiden.</li>
@@ -174,42 +171,40 @@ dropdownButtons.forEach((button) => {
         <div class="hand-drawn-line-green"></div>
         <br><br>
         <section class="text-section">
-            <img src="images/Blyant(funktioner i alia) grøn.svg" alt="funktioner i Alia blyant" id="blyanter">
+            <img src="images/Blyant-funktioner-i-alia-grøn.svg" alt="funktioner i Alia blyant" class="blyanter">
             <br>
-              <h3><span class="emoji">✅</span>Nem registrering</h3>
+              <h2><span class="emoji">✅</span>Nem registrering</h2>
 <p>Meld sygdom, ansøg om frihed eller planlæg din ferie direkte i systemet. Det er hurtigt, enkelt og altid tilgængeligt.</p>
 <br>
-<h3><span class="emoji">✉️</span>Kommunikation gjort let</h3>
+<h2><span class="emoji">✉️</span>Kommunikation gjort let</h2>
 <p>Send beskeder og hold nemt kontakt med personalet for bedre koordinering og samarbejde.</p>
 <br>
-<h3><span class="emoji">⏰</span>Overblik over mødetider</h3>
+<h2><span class="emoji">⏰</span>Overblik over mødetider</h2>
 <p>Få et klart overblik over dine arbejdstider, planlagte vagter og eventuelle ændringer – alt samlet ét sted.</p>
 <br>
-<h3><span class="emoji">📝</span>Personlig tilpasning</h3>
+<h2><span class="emoji">📝</span>Personlig tilpasning</h2>
 <p>Opdater og rediger dine stamkortoplysninger hurtigt og nemt, så dine data altid er ajour.</p>
         </section>
         <br><br>
         <div class="hand-drawn-line-yellow"></div>
         <br><br>
-        <section class="text-section">
-            <img src="images/Blyant (har du problemer) gul.svg" alt="har du problemer blyant" id="blyanter">
+        <div class="text-section">
+            <img src="images/Blyant-har-du-problemer-gul.svg" alt="har du problemer blyant" class="blyanter">
             <br>
             <p>Du er meget velkommen til at tage fat i personalet, hvis du på nogen som helst måde skulle komme til at opleve:</p>
+            <ul>
               <li>Udfordringer.</li>
               <li>Har brug for hjælp.</li>
               <li>Sidder inde med spørgsmål.</li>
-        </section>
+            </ul>
+          </div>
         <br><br>
 <div class="hand-drawn-line-red"></div>
 <br><br>
-</body>
 <footer>
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
+  <div class="container my-5">
   <!-- Footer -->
-  <footer
-          class="text-center text-lg-start text-black"
-          >
+
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Links -->
@@ -218,56 +213,60 @@ dropdownButtons.forEach((button) => {
         <div class="row">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
+            <h3 class="text-uppercase mb-4 font-weight-bold">
               Børnegården Katholt
-            </h6>
+            </h3>
             <p>
               Vi tilbyder en tryg og stimulerende hverdag for børn med fokus på udvikling, leg og læring.
               Med et engageret personale skaber vi et inkluderende miljø, der fremmer børns nysgerrighed og selvstændighed.
             </p>
           </div>
           <!-- Grid column -->
- 
-          <hr class="w-100 clearfix d-md-none" />
- 
-         <!-- Grid column -->
-         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Børnehave</h6>
-          <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
-          <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
-          <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">Børnehave</h3>
+            <p><a href="ny-børnehave.html">Ny i børnehaven</a></p>
+            <p><a href="børne-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="børne-indmeld.html">Ind- og udmeldelse/takster</a></p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">
+              Fritidshjem
+            </h3>
+            <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
+            <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
+            <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h3 class="text-uppercase mb-4 font-weight-bold">Information</h3>
+              <p><a href="info-kontakt.html">Kontakt</a></p>
+              <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
+              <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
+              <p><a href="info-studerende.html">Studerende</a></p>
+          </div>
+          <!-- Grid column -->
         </div>
-        <!-- Grid column -->
-        <hr class="w-100 clearfix d-md-none" />
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">
-            Fritidshjem
-          </h6>
-          <p><a href="ny-fritidshjem.html">Ny i fritidshjemmet</a></p>
-          <p><a href="fritid-praktisk.html">Praktiske oplysninger</a></p>
-          <p><a href="fritid-indmeld.html">Ind- og udmeldelse/takster</a></p>
-        </div>
-        <!-- Grid column -->
-        <hr class="w-100 clearfix d-md-none" />
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Information</h6>
-            <p><a href="info-kontakt.html">Kontakt</a></p>
-            <p><a href="info-besøg.html">Åbningstider og lukkedage</a></p>
-            <p><a href="info-bestyrelse.html">Bestyrelse</a></p>
-            <p><a href="info-studerende.html">Studerende</a></p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
- 
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
       <hr class="my-3">
- 
+
       <!-- Section: Copyright -->
-      <section class="p-3 pt-0">
+      <div class="p-3 pt-0">
         <div class="row d-flex align-items-center">
           <!-- Grid column -->
           <div class="col-md-7 col-lg-8 text-center text-md-start">
@@ -282,13 +281,14 @@ dropdownButtons.forEach((button) => {
           </div>
           <!-- Grid column -->
         </div>
-      </section>
+      </div>
+      </div>
       <!-- Section: Copyright -->
-    </div>
+
     <!-- Grid container -->
-  </footer>
   <!-- Footer -->
 </div>
 <!-- End of .container -->
 </footer>
+</body>
 </html>

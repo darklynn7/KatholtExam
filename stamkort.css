@@ -221,7 +221,7 @@ header p {
     font: 16px;
   }
  
-  footer h6 {
+  footer h3 {
     font-family: 'Dekko', sans-serif;
     font-size: 22px; /* Adjust the size as needed */
     font-weight: bold;
@@ -372,7 +372,7 @@ form input[type="submit"]:hover {
   font-family: 'PT Serif', serif;
   font-size: 16px;
 }
-.text-section h3 {
+.text-section h2 {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -405,7 +405,7 @@ form input[type="submit"]:hover {
   height: 10px;                /* Adjust height based on line style */
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
-#blyanter {
+.blyanter {
   height: 70px; /* Matches the font size */
   width: auto; /* Maintains aspect ratio */
   align-content: center; /* Aligns image with the text baseline */
@@ -462,7 +462,7 @@ font-size: 16px;
     line-height: 1.5; /* Improve readability */
   }
 
-  .text-section h3 {
+  .text-section h2 {
     font-size: 22px; /* Smaller headings */
   }
 
@@ -470,7 +470,7 @@ font-size: 16px;
     font-size: 16px;
   }
 
-  #blyanter {
+  .blyanter {
     display: block;
     margin: 0 auto 20px; /* Center align and add spacing below */
     max-width: 90%;
