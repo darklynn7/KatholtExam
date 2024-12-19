@@ -287,6 +287,7 @@ font-size: 16px;
   margin: 0 auto 20px; /* Center align and add spacing below */
   max-width: 80%;
   height: auto; /* Maintain aspect ratio */
+  font-family: 'Dekko', sans-serif;
 }
 }
 

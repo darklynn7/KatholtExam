@@ -289,6 +289,13 @@ font-size: 16px;
   max-width: 90%; /* Allow image to use most of the screen width */
   margin-bottom: 10px; /* Reduce spacing */
 }
+
+.blyanter {
+  display: block;
+  margin: 0 auto 20px; /* Center align and add spacing below */
+  max-width: 90%;
+  height: auto; /* Maintain aspect ratio */
+}
 }
   .emoji {
     font-size: 18; /* Ændr størrelsen på emojis */

@@ -308,4 +308,11 @@ header p {
     font-size: 14px;
     margin-bottom: 8px;
   }
+
+  .blyanter {
+    display: block;
+    margin: 0 auto 20px; /* Center align and add spacing below */
+    max-width: 90%;
+    height: auto; /* Maintain aspect ratio */
+  }
 }

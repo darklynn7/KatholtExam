@@ -310,6 +310,14 @@ text-decoration: none !important;
     .enrollment-fees a {
       font-size: 0.85rem;
     }
+
+    .blyanter {
+      display: block;
+      margin: 0 auto 20px; /* Center align and add spacing below */
+      max-width: 90%;
+      height: auto; /* Maintain aspect ratio */
+      font-family: 'Dekko', sans-serif;
+    }
   }
   
   
