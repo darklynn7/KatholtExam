@@ -186,6 +186,10 @@ cursor: pointer;
 .dropdown-button:focus + .dropdown-content {
   display: block; /* Show dropdown on button press */
 }
+
+.topnav.responsive {
+  display: flex; /* Show menu when responsive class is added */
+}
 }
 
 

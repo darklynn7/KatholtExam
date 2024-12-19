@@ -161,6 +161,10 @@ body {
     display: block; /* Show hamburger icon */
   }
 
+  .topnav.responsive {
+    display: flex; /* Show menu when responsive class is added */
+  }
+
   .dropdown-content {
     display: none; /* Ensure dropdowns are hidden initially */
     background-color: #f1f1f1; /* Match background */
@@ -336,6 +340,23 @@ header h1 {
   .info-container {
     padding: 8px;
     margin: 10px auto;
+  }
+
+  .info-container {
+    padding: 8px;
+    margin: 10px auto;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px; /* Add spacing between the stacked sections */
+  }
+
+  .left-section,
+  .right-section {
+    flex: none; /* Prevent sections from stretching */
+    width: 100%; /* Ensure sections take the full width */
   }
 
   .blyanter {

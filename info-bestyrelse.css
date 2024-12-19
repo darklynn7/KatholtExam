@@ -186,6 +186,10 @@ text-decoration: none !important;
   .dropdown-button:focus + .dropdown-content {
     display: block; /* Show dropdown on button press */
   }
+
+  .topnav.responsive {
+    display: flex; /* Show menu when responsive class is added */
+  }
 }
 
 
@@ -290,14 +294,6 @@ header p {
 
 .text-section li {
   padding-left: 10px;
-}
-
-/* Responsive Images */
-.text-section img {
-  max-width: 100%; /* Image scales down with screen size */
-  height: auto;
-  display: block; /* Center the image */
-  margin: 0 auto 15px;
 }
 
 @media (max-width: 480px) {
