@@ -477,7 +477,7 @@ font-size: 16px;
   margin-bottom: 15px;
   color: #555;
   font-family: 'PT Serif', serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (max-width: 480px) {
@@ -490,7 +490,7 @@ font-size: 16px;
   }
 
   .day-section p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
 }
