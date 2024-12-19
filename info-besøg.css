@@ -137,10 +137,6 @@ text-decoration: none !important;
     border-top: 1px solid #ddd; /* Optional: Border for clarity */
   }
 
-  .topnav.responsive {
-    display: flex; /* Show menu when responsive class is added */
-  }
-
   .topnav a,
   .dropdown-button {
     display: block; /* Stack as blocks */
@@ -151,11 +147,6 @@ text-decoration: none !important;
     text-align: left; /* Align text to the left */
     box-sizing: border-box; /* Ensure padding and borders fit */
     border: none; /* Remove default borders */
-  }
-
-  .topnav a + .dropdown-button,
-  .dropdown-button + a {
-    border-top: 1px solid #aaa; /* Dark grey line between sections */
   }
 
   .topnav > a,
@@ -192,8 +183,7 @@ text-decoration: none !important;
     border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
   }
 
-  .dropdown-button:focus + .dropdown-content,
-  .dropdown-button.active + .dropdown-content {
+  .dropdown-button:focus + .dropdown-content {
     display: block; /* Show dropdown on button press */
   }
 }
@@ -224,16 +214,6 @@ header p {
   font-family: 'PT Serif', serif;
   font-size: 16px;
 }
-.btn-primary {
-  background-color: #007bff; /* Bootstrap primary blue */
-  border: none;
-}
-.btn-primary:hover {
-  background-color: #0056b3; /* Darker blue for hover */
-}
-.footer {
-  background-color: white;
-  }
 
   footer a {
     color: black; /* Muted text */
@@ -259,16 +239,6 @@ header p {
 }
 .hand-drawn-line-green {
   background-image: url('./images/dotted-line-grøn.svg'); /* Path to your SVG */
-  height: 10px;                /* Adjust height based on line style */
-  background-repeat: repeat-x; /* Repeat the pattern horizontally */
-}
-.hand-drawn-line-yellow {
-  background-image: url('./images/dotted-line-gul.svg'); /* Path to your SVG */
-  height: 10px;                /* Adjust height based on line style */
-  background-repeat: repeat-x; /* Repeat the pattern horizontally */
-}
-.hand-drawn-line-red {
-  background-image: url('./images/dotted-line-rød.svg'); /* Path to your SVG */
   height: 10px;                /* Adjust height based on line style */
   background-repeat: repeat-x; /* Repeat the pattern horizontally */
 }
@@ -328,25 +298,6 @@ header p {
   margin: 0 auto 15px;
 }
 
-/* Add Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .text-section {
-    padding: 15px;
-  }
-
-  .text-section h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .text-section p,
-  .text-section ul,
-  .text-section li,
-  .text-section b {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-}
 
 @media (max-width: 480px) {
   .text-section {
@@ -362,7 +313,7 @@ header p {
   .text-section ul,
   .text-section li,
   .text-section b {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 8px;
   }
 }

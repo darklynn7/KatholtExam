@@ -137,10 +137,6 @@ body {
     border-top: 1px solid #ddd; /* Optional: Border for clarity */
   }
 
-  .topnav.responsive {
-    display: flex; /* Show menu when responsive class is added */
-  }
-
   .topnav a,
   .dropdown-button {
     display: block; /* Stack as blocks */
@@ -151,11 +147,6 @@ body {
     text-align: left; /* Align text to the left */
     box-sizing: border-box; /* Ensure padding and borders fit */
     border: none; /* Remove default borders */
-  }
-
-  .topnav a + .dropdown-button,
-  .dropdown-button + a {
-    border-top: 1px solid #aaa; /* Dark grey line between sections */
   }
 
   .topnav > a,
@@ -192,8 +183,7 @@ body {
     border-top: 1px solid #ccc; /* Slightly lighter line inside dropdowns */
   }
 
-  .dropdown-button:focus + .dropdown-content,
-  .dropdown-button.active + .dropdown-content {
+  .dropdown-button:focus + .dropdown-content {
     display: block; /* Show dropdown on button press */
   }
 }
@@ -224,19 +214,6 @@ header p {
   font-family: 'PT Serif', serif;
   font-size: 16px;
 }
- 
-  .btn-primary {
-    background-color: #007bff; /* Bootstrap primary blue */
-    border: none;
-  }
- 
-  .btn-primary:hover {
-    background-color: #0056b3; /* Darker blue for hover */
-  }
- 
-  .footer {
-  background-color: white;
-  }
 
   footer a {
     color: black; /* Muted text */
@@ -282,21 +259,6 @@ header p {
   font-family: 'PT Serif', serif;
   text-align: center;
   }
-
-  .info-section h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-family: 'Dekko', sans-serif;
-    text-align: center;
-  }
- 
-  .info-section p {
-    margin-bottom: 10px;
-    color: #555;
-    font-family: 'PT Serif', serif;
-    text-align: center;
-    }
    
   
     
@@ -326,8 +288,7 @@ header p {
     }
 
 /* Form Input Styling */
-form input[type="text"],
-form input[type="password"] {
+form input[type="text"] {
   width: 100%;
   padding: 10px;
   margin: 5px 0 15px;
@@ -358,58 +319,8 @@ form input[type="submit"]:hover {
 }
 
 /* Links Styling */
-.info-section a {
-  text-decoration: none;
-  color: #007BFF; /* Blue for links */
-  font-family: 'PT Serif', serif;
-  font: 16px;
-}
-
-.info-section a:hover {
-  text-decoration: underline;
-  font-family: 'PT Serif', serif;
-  font: 16px;
-}
 
 /* Optional: Styling for Labels */
-label {
-  font-weight: bold;
-  color: #333;
-  font-family: 'PT Serif', serif;
-  font: 16px;
-}
-
- 
-.enrolment-section h1{
-    font-family: 'Dekko', sans-serif;
-    font-weight: bold ;
-text-align: center;
-font-size: 40px;
-}
- 
-.enrolment-section p {
-    margin-bottom: 20px;
-    color: #555;
-    font-family: 'PT serif', serif;
-    font-size: 18px;
-}
- 
-.enrolment-section  {
-    padding: 50px 0;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-.enrolment-form {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    width: 300px;
-}
 .text-section {
   padding: 20px;
   background-color: white;
@@ -541,17 +452,13 @@ font-size: 16px;
 }
 
 /* MEDIA QUERY FOR PHONE SCREENS */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .text-section {
     padding: 10px;
   }
 
-  .text-section ol, ul,
-  .text-section p,
-  .text-section li,
-  .text-section ul li,
-  .text-section ol li {
-    font-size: 15px; /* Further reduce font size */
+  .text-section ol, ul, .text-section p, .text-section li, .text-section ul li, .text-section ol li {
+    font-size: 14px; /* Further reduce font size */
     line-height: 1.5; /* Improve readability */
   }
 
